@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+
+html, body {
+  height: 100vh;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.back {
+  background-size: cover;
+  background: url(https://i.gifer.com/N1eO.gif) fixed;
+  grid-area: dia;
+
+}
+
+.container {
+  display: grid;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  grid-template-areas:
+      "logo header header header"
+	  "pic pic login login"
+      "nav nav nav nav"
+      "left left1 right2 right"
+	  "dia dia dia dia"
+      "footer footer footer footer";
+
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 15% 35% 10% 40% 10% 20% 20% 20%;
+
+}
+
+grid-template-areas.nav {
+  background-color: white;
+}
+
+/* Das Bild
+background-color: #466995; */
+
+.logo {
+  grid-area: logo;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #465995;
+}
+
+/* Nav Bar */
+.header {
+  background-color: dodgerblue;
+  grid-area: header;
+  text-align: center;
+  height: 100%;
+}
+
+.navbar {
+  position: center;
+  margin-top: 75px;
+
+
+}
+
+.navbar li {
+  display: inline;
+}
+
+.navitem {
+  padding: 15px;
+  display: inline;
+  background-color: #dddddd;
+  margin-top: 75px;
+}
+
+li a:hover {
+  background-color: #111;
+
+}
+
+.background {
+  grid-area: pic;
+}
+
+.wallpaper {
+  grid-area: logo;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #465995;
+}
+
+.login-area {
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+}
+
+.password-area {
+  background-color: white;
+  text-align: center;
+  font-size: 30px;
+}
+.login-box {
+  background-color: white;
+  grid-area: login;
+  display: grid;
+  max-width: 100%;
+  position: relative;
+  rid-template-columns: 100%;
+  grid-template-rows: 25% 10% 15% 10% 15% 12.5% 12.5%;
+
+
+}
+
+.uberschrift {
+  text-align: center;
+  font-size: 260%;
+  background-size: cover;
+  font-family: 'Cabin Condensed', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+svg {
+  font-weight: bold;
+  max-width: 600px;
+  height: 100%;
+}
+
+.username {
+  text-align: center;
+  font-size: 150%;
+}
+
+.password {
+  text-align: center;
+  font-size: 150%;
+  margin-top: 27px;
+}
+
+.login {
+  text-align: center;
+  font-size: 150%;
+  margin-top: 5%;
+}
+
+.tom {
+  grid-area: nav;
+  text-align: center;
+  font-size: 350%;
+  background-image: url(https://media.giphy.com/media/26BROrSHlmyzzHf3i/giphy.gif);
+  background-size: cover;
+  color: transparent;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+}
+
+.picture {
+  height: 100%;
+  width: 100%;
+}
+
+
+.left {
+  background-color: white;
+  grid-area: left;
+  text-align: center;
+}
+
+.right {
+  background-color: white;
+  background-color: beige;
+  grid-area: right;
+  text-align: center;
+}
+
+.left2 {
+  background-color: white;
+  grid-area: left1;
+  text-align: center;
+  margin: 12px;
+
+}
+
+.right2 {
+  background-color: white;
+  grid-area: right2;
+  text-align: center;
+  margin: 12px;
+
+}
+
+footer {
+  background-color: dodgerblue;
+  grid-area: footer;
+  text-align: center;
+}
+
+footer {
+  margin-top: 3%;
+  background-color: #466995;
+  grid-area: footer;
+}
+
+.nav-footer-bar {
+  display: inline;
+}
+
+.nav-footer-item {
+  padding: 20px;
+  background-color: #dddddd;
+}
+
+.icon {
+  height: 55px;
+  background-color: #dddddd;
+  margin: -1.55% auto;
+  display: inline;
+
+
+}
+
+.username {
+  margin-top: 12px;
+}
+
+.loading {
+  font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;
+  text-transform: uppercase;
+
+  width: 150px;
+  text-align: center;
+  line-height: 50px;
+
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+.loading span {
+  position: relative;
+  z-index: 999;
+  color: #fff;
+}
+
+.loading:before {
+  content: '';
+  background: #61bdb6;
+  width: 128px;
+  height: 36px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  animation: 2s loadingBefore infinite ease-in-out;
+}
+
+@keyframes loadingBefore {
+  0% {
+    transform: translateX(-14px);
+  }
+  50% {
+    transform: translateX(14px);
+  }
+  100% {
+    transform: translateX(-14px);
+  }
+}
+
+
+.loading:after {
+  content: '';
+  background: #ff3600;
+  width: 14px;
+  height: 60px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: .5;
+
+  animation: 2s loadingAfter infinite ease-in-out;
+}
+
+@keyframes loadingAfter {
+  0% {
+    transform: translateX(-50px);
+  }
+  50% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}
+
+#bgcodeimg {
+  grid-area: dia;
+  text-align: center;
+  text-transform: uppercase
+
+}
+
+.text {
+  background-size: cover;
+  color: white;
+  font-size: 50px
+}
+
