@@ -18,6 +18,10 @@
   left: 0;
   z-index: -1;
 }
+main {
+
+
+}
 
 .btn {
   padding: 10px;
@@ -39,9 +43,6 @@
   border-color: rgba(255, 255, 255, 0.3)
 }
 
-.btn + .btn {
-  margin-left: 1rem
-}
 
 header {
 

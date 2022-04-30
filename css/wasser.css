@@ -1,0 +1,192 @@
+html, body {
+  height: 100vh;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  background-color: gray;
+}
+
+header {
+  background-color: #466995;
+  border-bottom: 1px solid #466995;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+
+}
+
+ul {
+  margin: 30px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+#blau {
+  background-color: blue;
+  height: 200px;
+}
+
+#links {
+  float: left;
+  width: 20%;
+  margin-left: 2.5%;
+}
+
+#rechts {
+  float: right;
+  width: 75%;
+  margin-top: 4.5%
+}
+
+.navbar {
+  display: inline;
+}
+
+.navigate {
+  padding: 20px;
+  background-color: #dddddd;
+}
+
+li a:hover {
+  background-color: #111;
+
+}
+
+#links2 {
+  float: left;
+  width: 50%;
+
+}
+
+#rechts2 {
+  float: right;
+  width: 50%;
+}
+
+.logo {
+  height: 100px;
+  padding: 8px;
+  background-color: #dddddd;
+  margin: 30px auto;
+  text-align: center;
+
+}
+
+.wallpaper {
+  height: 350px;
+}
+
+.überschrift {
+  float: left;
+  width: 50%;
+  font-size: 50px;
+  text-align: center;
+
+}
+
+.login {
+  float: left;
+  width: 50%;
+  font-size: 25px;
+  text-align: center;
+  line-height: 50px;
+
+}
+
+.login-box {
+  float: left;
+  width: 49%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 10px;
+}
+
+.login-send {
+  float: left;
+  width: 49.5%;
+  font-size: 15px;
+  text-align: center;
+  line-height: 50px;
+
+}
+
+#abschnitt3 {
+  float: left;
+  width: 100%;
+
+}
+
+.überschrift2 {
+  float: left;
+  font-size: 100px;
+  text-align: center;
+  width: 100%;
+}
+
+#abschnitt4 {
+
+}
+
+#abschnitt4links1 {
+  float: left;
+  width: 25%;
+
+}
+
+#abschnitt4links2 {
+  float: left;
+  width: 25%;
+}
+
+#abschnitt4rechts1 {
+  float: right;
+  width: 25%;
+
+}
+
+#abschnitt4rechts2 {
+  float: right;
+  width: 25%;
+}
+
+#text {
+  float: left;
+  font-size: 18px;
+  text-align: center;
+}
+
+.picture {
+  height: 500px;
+  background-color: #dddddd;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.icon {
+  height: 55px;
+  background-color: #dddddd;
+  margin: -1.55% auto;
+  display: inline;
+
+
+}
+
+footer {
+  background-color: #466995;
+  border-bottom: 1px solid #466995;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+
+.nav-footer-bar {
+  display: inline;
+}
+
+.nav-footer-item {
+  padding: 20px;
+  background-color: #dddddd;
+}
