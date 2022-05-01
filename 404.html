@@ -5,57 +5,33 @@
   <meta charset="utf-8">
   <title>Page Not Found</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    * {
-      line-height: 1.2;
-      margin: 0;
-    }
-
-    html {
-      color: #888;
-      display: table;
-      font-family: sans-serif;
-      height: 100%;
-      text-align: center;
-      width: 100%;
-    }
-
-    body {
-      display: table-cell;
-      vertical-align: middle;
-      margin: 2em auto;
-    }
-
-    h1 {
-      color: #555;
-      font-size: 2em;
-      font-weight: 400;
-    }
-
-    p {
-      margin: 0 auto;
-      width: 280px;
-    }
-
-    @media only screen and (max-width: 280px) {
-
-      body,
-      p {
-        width: 95%;
-      }
-
-      h1 {
-        font-size: 1.5em;
-        margin: 0 0 0.3em;
-      }
-
-    }
-  </style>
+  <link rel="stylesheet" href="css/404.css">
+  <link rel="stylesheet" href="css/normalize.css">
 </head>
-
 <body>
-  <h1>Page Not Found</h1>
-  <p>Sorry, but the page you were trying to view does not exist.</p>
+<div class="cont_principal">
+  <div class="cont_error">
+
+    <div class="error-container">
+      <span class="four"><span class="screen-reader-text">4</span></span>
+      <span class="zero"><span class="screen-reader-text">0</span></span>
+      <span class="four"><span class="screen-reader-text">4</span></span>
+    </div>
+
+    <p>Die Seite die Sie suchen ist nicht vorhanden.</p>
+    <br>
+    <a href="https://louisspielt.github.io/MyWebsiteProjects/" class="btn">Zurück</a>
+  </div>
+  <div class="cont_aura_1"></div>
+  <div class="cont_aura_2"></div>
+</div>
+<script>
+  window.onload = function () {
+    document.querySelector('.cont_principal').className = "cont_principal cont_error_active";
+  }
+
+</script>
+
 </body>
 
 </html>

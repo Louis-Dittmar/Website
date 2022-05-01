@@ -1,0 +1,164 @@
+* {
+  font-family: 'Roboto', sans-serif;
+  background: #2e2e2e;
+  color: white;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto; /* 1fr */
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header header header"
+    "javacode javacode javacode javacode javacode javacode"
+    "github github github github github github"
+    "html html html html html html"
+    ". . . . . ."
+    ". . . . . ."
+    "footer footer footer footer footer footer";
+
+}
+
+.htmlcode {
+  grid-area: html;
+}
+
+.header {
+  grid-area: header;
+  margin-top: 15px;
+  osition: relative;
+  text-align: center;
+  top: 60px;
+  height: auto;
+  min-width: auto;
+
+}
+
+.javacode {
+  grid-area: javacode;
+}
+
+.headvoid {
+  font-size: 50px;
+  border-top: 10px solid #1f2021;
+  border-bottom: 10px solid #1f2021;
+  background: url("../img/code.png") fixed;
+  grid-area: dia;
+  color: white;
+
+
+}
+
+.headspace {
+  grid-area: dia;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: transparent;
+
+}
+
+.headline {
+
+  text-align: center;
+  background: url("../img/code.png") fixed;
+}
+
+.github {
+  margin-top: 15px;
+  grid-area: github;
+  osition: relative;
+  text-align: center;
+  top: 60px;
+  height: auto;
+  min-width: auto;
+}
+
+.card {
+  margin: 10px;
+  grid-area: github;
+  border-color: #1f2021;
+  border-width: 25px;
+  border-style: solid;
+  border-radius: 18px;
+  background-color: #1f2021;
+  text-align: center;
+  display: inline-block;
+  height: auto;
+  width: 300px;
+}
+
+.smalcard {
+  margin: 10px;
+  grid-area: github;
+  border-color: #1f2021;
+  border-width: 25px;
+  border-style: solid;
+  border-radius: 18px;
+  background-color: #1f2021;
+  text-align: center;
+  display: inline-block;
+  height: auto;
+  width: auto;
+}
+
+.smalcard:hover {
+  margin: 10px;
+  grid-area: github;
+  border-color: #131212;
+  border-width: 25px;
+  border-style: solid;
+  border-radius: 18px;
+  background-color: #131212;
+  text-align: center;
+  display: inline-block;
+}
+
+
+.card:hover {
+  margin: 10px;
+
+  grid-area: github;
+  border-color: #131212;
+  border-width: 25px;
+  border-style: solid;
+  border-radius: 18px;
+  background-color: #131212;
+  text-align: center;
+  display: inline-block;
+  height: auto;
+  width: 300px;
+}
+
+.cardimg {
+  height: 160px;
+  border-radius: 18px;
+  background-color: transparent;
+}
+
+.cardlink {
+  text-align: center;
+  background-color: transparent;
+  text-decoration: none;
+  height: 100%;
+  width: 100%;
+
+}
+
+.cardtext {
+  text-align: center;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.cardtest {
+  background-color: transparent;
+  border: aqua;
+  border-radius: 18px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+
