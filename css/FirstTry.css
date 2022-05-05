@@ -64,7 +64,7 @@
   background: url("../img/code.png") fixed;
 }
 
-.github {
+.Item-Container {
   margin-top: 15px;
   grid-area: github;
   osition: relative;
@@ -145,16 +145,15 @@
 
 }
 
-.cardtext {
-  text-align: center;
+.card-text {
   background-color: transparent;
   text-decoration: none;
+
 }
 
-.cardtest {
-  background-color: transparent;
-  border: aqua;
-  border-radius: 18px;
+a {
+  text-align: justify;
+
 }
 
 .footer {
