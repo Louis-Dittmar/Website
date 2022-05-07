@@ -1,0 +1,280 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+/*
+Copyright (c) 2022 by Louis Dittmar
+This program is free software: you can redistribute it and/or modify
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
+documentation files (the "Software"), to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
+and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Inspired by:
+https://codepen.io/goodkatz/details/LYPGxQz (by Goodkatz, with some modifications)
+ */
+
+
+body {
+  background: #2e2e2e;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  justify-content: center;
+  max-width: 100%;
+
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  template-rows: 100vh 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "header header header header header"
+    "navbar navbar navbar navbar navbar"
+    "☺ ☺ ☺ ☺ ☺"
+    "☻ ☻ ☻ ☻ ☻"
+    "♥ ♥ ♥ ♥ ♥"
+    "♦ ♦ ♦ ♦ ♦"
+    "♣ ♣ ♣ ♣ ♣"
+    "♠ ♠ ♠ ♠ ♠"
+    "• • • • •"
+    "◘ ◘ ◘ ◘ ◘"
+    "footer footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+
+}
+
+
+.♦ {
+  grid-area: ♦;
+  background: var(--default-background);
+}
+
+.♣ {
+  grid-area: ♣;
+
+}
+
+.♠ {
+  grid-area: ♠;
+}
+
+.• {
+  grid-area: •;
+}
+
+.◘ {
+  grid-area: ◘;
+}
+
+.○ {
+  grid-area: ○;
+}
+
+.♂ {
+  grid-area: ♂;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.üs {
+  font-family: Roboto, sans-serif;
+  font-size: 75px;
+  font-weight: 300;
+  letter-spacing: 2px;
+
+}
+
+.üs:hover {
+  transform: translate3d(0, -10px, 22px);
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: var(--header-background);
+  color: var(--header-text);
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  margin-bottom: -10px;
+  min-height: 100px;
+  max-height: 200px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 30vh;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+.navbar-location {
+  grid-area: ☺;
+  margin-top: 10px;
+}
+
+.navbar-fixed {
+  position: fixed;
+  top: 0em;
+  z-index: 999;
+}
+
+nav {
+  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  width: 100%;
+  color: var(--default-text);
+  background: var(--header-color);
+  letter-spacing: 0.025em;
+
+}
+
+nav:hover {
+  color: var(--nav-default-text);
+}
+
+
+nav > ul {
+  text-align: center;
+  margin: 0;
+}
+
+nav > ul > li {
+  display: inline-block;
+  padding: 0 3em;
+  line-height: 3em;
+  transition: 0.5s;
+}
+
+nav > ul > li:hover {
+  background: var(--default-hover);
+  transform: translateY(0);
+  color: var(--nav-hover-textcolor);
+  transition: 0.5s;
+}
+
+
+.☻ {
+  background: #333;
+  grid-area: ☻;
+  padding-bottom: 30px;
+}
+
+.headline {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-header {
+  background-color: #333;
+  margin-bottom: 50px;
+  padding: 1.5% 25%;
+  text-align: center;
+  color: var(--default-text);
+  font-weight: 700;
+  box-shadow: var(--default-shadow);
+}
+
+.section-header:hover {
+  background: var(--default-hover);
+  transform: translateY(0);
+  color: var(--nav-hover-textcolor);
+  margin-bottom: 50px;
+  padding: 1.5% 25%;
+  text-align: center;
+  font-weight: 700;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+}
+
+.section-header {
+  transition: 0.5s;
+}
+
+.♥ {
+  grid-area: ♥;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  padding-bottom: 500px;
+}
