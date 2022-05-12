@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ToDo List</title>
+  <link rel="stylesheet" href="../css/ToDoList.css">
+  <link rel="stylesheet" href="../css/normalize.css">
+</head>
+<body>
+<header>
+  <h1>ToDo</h1><label for="userInput"></label><input tpye="text" id="userInput" placeholder="Wasser, Eis, Karotten,...">
+</header>
+<hr style="background-color: black; color: transparent; outline: 0; width: 100vw; height: 15px;"></hr>
+<main>
+  <ul id="MyList">
+    <li><input type="checkbox" class="Check-Box"/><a class="RemoveElement" onclick="MyRemove(this)"> X - </a><a>1 |
+      LoremIpsum</a></li>
+    <li><input type="checkbox" class="Check-Box"/><a class="RemoveElement" onclick="MyRemove(this)"> X - </a><a>1 |
+      LoremIpsum</a></li>
+    <li><input type="checkbox" class="Check-Box"/><a class="RemoveElement" onclick="MyRemove(this)"> X - </a><a>1 |
+      LoremIpsum</a></li>
+    <li><input type="checkbox" class="Check-Box"/><a class="RemoveElement" onclick="MyRemove(this)"> X - </a><a>1 |
+      LoremIpsum</a></li>
+    <li><input type="checkbox" class="Check-Box"><a class="RemoveElement" onclick="MyRemove(this)"> X - </a><a>1 |
+      LoremIpsum</a></li>
+    <li><input type="checkbox" class="Check-Box"><a class="RemoveElement" onclick="MyRemove(this)"> X - </a><a>1 |
+      LoremIpsum</a></li>
+    <li><input type="checkbox" class="Check-Box"><a class="RemoveElement" onclick="MyRemove(this)"> X - </a><a>1 |
+      LoremIpsum</a></li>
+  </ul>
+
+  <div class="parent">
+    <button id="DeleteButton" onclick="DelAllTrue()">Erledigte Löschen</button>
+    <button id="DeleteAllButton" onclick="DelAll()">Alle Löschen</button>
+  </div>
+</main>
+<script src="../js/ToDoList.js"></script>
+
+</body>
+</html>
