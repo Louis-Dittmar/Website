@@ -88,7 +88,7 @@ background-color: #466995; */
   display: inline;
 }
 
-.navitem {
+.navigation-item {
   padding: 15px;
   display: inline;
   background-color: #dddddd;
@@ -130,13 +130,13 @@ li a:hover {
   display: grid;
   max-width: 100%;
   position: relative;
-  rid-template-columns: 100%;
+  grid-template-columns: 100%;
   grid-template-rows: 25% 10% 15% 10% 15% 12.5% 12.5%;
 
 
 }
 
-.uberschrift {
+.headline {
   text-align: center;
   font-size: 260%;
   background-size: cover;

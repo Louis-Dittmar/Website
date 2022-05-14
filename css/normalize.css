@@ -14,20 +14,6 @@
   --deko-aura1-shadow: 0px 0px 60px 20px rgb(62, 179, 196);
   --deko-aura2-color: #33afb7;
   --deko-aura2-shadow: 0px 0px 60px 10px rgb(37, 125, 131), 0px 0px 20px 0px rgba(0, 0, 0, 0.44);
-  /* Old About me */
-  --default-background: #333;
-  --default-text: #c5c5c5;
-  --nav-default-text: #a1a1a1;
-  --nav-default-color: #ff0057;
-  --nav-hover-textcolor: white;
-  --default-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
-  --text-shadow: 0 0 5px black;
-  --default-hover: #ff0057;
-  --default-grayout: #9d9d9d;
-  --dark-background: #1f1f1f;
-  --header-text: #ffffff;
-  --header-background: linear-gradient(60deg, rgb(212, 0, 246) 0%, rgba(0, 172, 193, 1) 100%);
-  --header-color: #2e2e2e
 }
 
 html {
@@ -65,9 +51,7 @@ a {
 
 abbr[title] {
   border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
+  text-decoration: underline; /* 2 */}
 
 b,
 strong {

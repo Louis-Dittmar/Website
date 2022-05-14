@@ -14,11 +14,16 @@ WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEM
 COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-
+:root {
+  --FirstTry-border-color: #131212;
+  --FirstTry-color: white;
+  --FirstTry-border-bottom: #1f2021;
+  --FirstTry-background: #2e2e2e;
+}
 * {
   font-family: 'Roboto', sans-serif;
-  background: #2e2e2e;
-  color: white;
+  background: var(--FirstTry-background);
+  color: var(--FirstTry-color);
 }
 
 .main {
@@ -44,7 +49,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 .header {
   grid-area: header;
   margin-top: 15px;
-  osition: relative;
+  position: relative;
   text-align: center;
   top: 60px;
   height: auto;
@@ -52,22 +57,22 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 }
 
-.javacode {
+.java-code {
   grid-area: javacode;
 }
 
-.headvoid {
+.head-void {
   font-size: 50px;
-  border-top: 10px solid #1f2021;
-  border-bottom: 10px solid #1f2021;
+  border-top: 10px solid var(--FirstTry-border-bottom);
+  border-bottom: 10px solid var(--FirstTry-border-bottom);
   background: url("../img/code.png") fixed;
   grid-area: dia;
-  color: white;
+  color: var(--FirstTry-color);
 
 
 }
 
-.headspace {
+.head-space {
   grid-area: dia;
   text-align: center;
   text-transform: uppercase;
@@ -84,49 +89,42 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 .Item-Container {
   margin-top: 15px;
   grid-area: github;
-  osition: relative;
+  position: relative;
   text-align: center;
   top: 60px;
   height: auto;
   min-width: auto;
 }
 
-.card {
+.card, .small-card {
   margin: 10px;
   grid-area: github;
-  border-color: #1f2021;
+  border-color: var(--FirstTry-border-bottom);
   border-width: 25px;
   border-style: solid;
   border-radius: 18px;
-  background-color: #1f2021;
+  background-color: var(--FirstTry-border-bottom);
   text-align: center;
   display: inline-block;
   height: auto;
+}
+
+.card {
   width: 300px;
 }
 
-.smalcard {
-  margin: 10px;
-  grid-area: github;
-  border-color: #1f2021;
-  border-width: 25px;
-  border-style: solid;
-  border-radius: 18px;
-  background-color: #1f2021;
-  text-align: center;
-  display: inline-block;
-  height: auto;
+.small-card {
   width: auto;
 }
 
-.smalcard:hover {
+.small-card:hover {
   margin: 10px;
   grid-area: github;
-  border-color: #131212;
+  border-color: var(--FirstTry-border-color);
   border-width: 25px;
   border-style: solid;
   border-radius: 18px;
-  background-color: #131212;
+  background-color: var(--FirstTry-border-color);
   text-align: center;
   display: inline-block;
 }
@@ -136,24 +134,24 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
   margin: 10px;
 
   grid-area: github;
-  border-color: #131212;
+  border-color: var(--FirstTry-border-color);
   border-width: 25px;
   border-style: solid;
   border-radius: 18px;
-  background-color: #131212;
+  background-color: var(--FirstTry-border-color);
   text-align: center;
   display: inline-block;
   height: auto;
   width: 300px;
 }
 
-.cardimg {
+.card-image {
   height: 160px;
   border-radius: 18px;
   background-color: transparent;
 }
 
-.cardlink {
+.card-link {
   text-align: center;
   background-color: transparent;
   text-decoration: none;
@@ -170,7 +168,6 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 
 a {
   text-align: justify;
-
 }
 
 .footer {

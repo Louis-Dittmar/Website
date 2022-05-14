@@ -1,8 +1,15 @@
 {
-  "name": "Website",
+  "name": "The Black Knight",
   "version": "0.0.1",
   "description": "My Website",
-  "keywords": "website",
+  "keywords": [
+    "node",
+    "express",
+    "webpack",
+    "react",
+    "redux",
+    "webpack-dev-server"
+  ],
   "license": "",
   "author": "Louis Dittmar",
   "scripts": {
@@ -12,6 +19,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4"
+    "parcel": "^2.0.0"
   }
 }
