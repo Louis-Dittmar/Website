@@ -48,20 +48,6 @@ https://codepen.io/THEORLAN2/pen/zqOLXQ (by Dany Santos, with some modifications
   window.onload = function () {
     document.querySelector('.cont_principal').className = "cont_principal cont_error_active";
   }
-
-  // Get System Color
-  function getRgbForColorName(name) {
-    const d = document.createElement("div")
-    d.style.color = name
-    document.body.appendChild(d)
-    const rgb = window.getComputedStyle(d).color
-    document.body.removeChild(d)
-    return rgb
-  }
-
-  console.log('Canvas:', getRgbForColorName('Canvas'))
-  console.log('Highlight:', getRgbForColorName('Highlight'))
-
 </script>
 </body>
 </html>
