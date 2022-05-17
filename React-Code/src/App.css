@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+root {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(253, 29, 29, 1) 50%, rgba(252, 176, 69, 1) 100%);
+    width: 100vw;
+    padding-top: 50px;
+    height: 500px;
+    font-size: 50px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+input {
+    font-size: 50px;
+    border-radius: 12px;
+    background-color: rgba(253, 230, 185, 0.494);
+
+}
+
+hr {
+    background-color: black;
+    color: black;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    border-color: black;
+    height: 10px;
+    background: black
+}
+
+/* Tabelle Erstellen */
+table {
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: auto;
+    padding-top: 50px;
+}
+
+tr, td, th {
+    font-size: 25px;
+    text-align: right;
+    transition: 0.1s;
+
+}
+
+tr {
+    border: solid;
+    border-color: gray;
+    border-width: 1px 0;
+
+}
+
+button {
+    font-size: 20px;
+    height: 25px;
+    width: 70%;
+
+}
+
+th[scope="col"] {
+    background-color: #696969;
+    color: #fff;
+}
+
+td:hover {
+    background-color: rgb(225, 147, 45);
+    transition: cubic-bezier(0.895, 0.03, 0.685, 0.22)
+}
+.Buttons {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50vw;
+    height: auto;
+    padding-top: 50px;
+
+}
+.Remove-Button {
+    align-items: center;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 20px;
+    height: auto;
+    margin: 10px;
+    margin-left: 25%;
+    font-size: 50px;
+}
