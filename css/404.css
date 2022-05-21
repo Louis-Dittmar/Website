@@ -20,6 +20,38 @@ https://codepen.io/THEORLAN2/pen/zqOLXQ (by Dany Santos, with some modifications
 
 
  */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #D4D9ED;
+    --button-text-color: #9294ae;
+    --button-background-color: #FFFFFF14;
+    --button-border-color: #FFFFFF33;
+    --button-hover-text-color: #5b5d6c;
+    --button-hover-background-color: #FFFFFF33;
+    --button-hover-border-color: #FFFFFF4C;
+    --deko-aura1-color: #2bdeef;
+    --deko-aura1-shadow: 0px 0px 60px 20px rgb(62, 179, 196);
+    --deko-aura2-color: #33afb7;
+    --deko-aura2-shadow: 0px 0px 60px 10px rgb(37, 125, 131), 0px 0px 20px 0px rgba(0, 0, 0, 0.44);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #2b2a34;
+    --button-text-color: #ffffff;
+    --button-background-color: rgba(221, 248, 250, 0.16);
+    --button-border-color: #FFFFFF33;
+    --button-hover-background-color: rgba(255, 255, 255, 0.76);
+    --button-hover-border-color: rgba(38, 38, 38, 0.78);
+    --deko-aura1-color: #2bdeef;
+    --deko-aura1-shadow: 0px 0px 60px 20px rgb(62, 179, 196);
+    --deko-aura2-color: #33afb7;
+    --deko-aura2-shadow: 0px 0px 60px 10px rgb(37, 125, 131), 0px 0px 20px 0px rgba(0, 0, 0, 0.44);
+  }
+
+}
+
 
 * {
   margin: 0 auto;
@@ -75,7 +107,6 @@ body {
 
 .btn {
   font-family: 'Catamaran', sans-serif;
-  font-weight: 400;
   padding: 10px;
   display: inline-block;
   color: var(--button-text-color);
@@ -84,17 +115,33 @@ body {
   border-style: solid;
   border-width: 2px;
   border-radius: 0.5rem;
+  text-align: center;
   text-decoration: none;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s
 }
 
-.btn:hover {
+input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  font-size: 40px;
+  font-family: 'Catamaran', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  color: var(--button-text-color);
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.btn:hover,
+.input:hover {
   color: #5b5d6c;
   text-decoration: none;
   background-color: var(--button-hover-background-color);
   border-color: var(--button-hover-border-color);
 }
-
 
 .cont_aura_1 {
   position: absolute;
@@ -377,6 +424,7 @@ body {
     margin: 20px;
   }
 }
+
 @media screen and (min-width: 2800px) {
   .cont_error_active > .cont_aura_1 {
     width: 2000px;
@@ -387,9 +435,9 @@ body {
 
   .cont_error_active > .cont_aura_2 {
     height: 700px;
-    margin-bottom: calc(100vh /2 - 600px);
+    margin-bottom: calc(100vh / 2 - 600px);
   }
 
 
-  }
+}
 

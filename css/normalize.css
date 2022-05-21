@@ -2,19 +2,6 @@
 
 /* Document
    ========================================================================== */
-:root {
-  --background-color: #D4D9ED;
-  --button-text-color: #9294ae;
-  --button-background-color: #FFFFFF14;
-  --button-border-color: #FFFFFF33;
-  --button-hover-text-color: #5b5d6c;
-  --button-hover-background-color: #FFFFFF33;
-  --button-hover-border-color: #FFFFFF4C;
-  --deko-aura1-color: #2bdeef;
-  --deko-aura1-shadow: 0px 0px 60px 20px rgb(62, 179, 196);
-  --deko-aura2-color: #33afb7;
-  --deko-aura2-shadow: 0px 0px 60px 10px rgb(37, 125, 131), 0px 0px 20px 0px rgba(0, 0, 0, 0.44);
-}
 
 html {
   line-height: 1.15; /* 1 */
