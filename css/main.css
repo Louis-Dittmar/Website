@@ -21,6 +21,45 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
  */
+@media (prefers-color-scheme: light) {
+  :root {
+    --main-color-black: rgba(2, 2, 2, 0.71);
+    --main-stop-color: rgb(212, 0, 246);
+    --main-stop-color1: rgba(0, 172, 193, 1);
+    --main-background-bottom: #d4d9ed;
+    --main-background-top: rgba(255, 255, 255, 0.96);
+    --main-border-color: rgba(0, 0, 0, 0.44);
+    --main-item-background-color: rgba(225, 220, 220, 0.39);
+    --main-item-button-hover: rgba(114, 114, 114, 0.13);
+    --main-item-button-hover-background: rgba(114, 114, 114, 0.2);
+    --main-header-text-color: #fff;
+    --main-header-button-border: rgba(255, 255, 255, 0.4);
+    --main-header-button-background-hover: rgba(255, 255, 255, 0.2);
+    --main-header-button-text-hover: rgba(255, 255, 255, 0.8);
+    --main-header-button-background: rgba(255, 255, 255, 0.08);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --main-color-black: rgba(2, 2, 2, 0.71);
+    --main-stop-color: rgb(212, 0, 246);
+    --main-stop-color1: rgba(0, 172, 193, 1);
+    --main-background-bottom: #151518;
+    --main-background-top: #2b2a34;
+    --main-border-color: rgb(185, 185, 185);
+    --main-item-background-color: rgba(58, 57, 57, 0.68);
+    --main-item-button-hover: rgba(114, 114, 114, 0.13);
+    --main-item-button-hover-background: rgba(166, 166, 166, 0.65);
+    --main-header-text-color: #fff;
+    --main-header-button-border: rgba(255, 255, 255, 0.4);
+    --main-header-button-background-hover: rgb(220, 205, 205);
+    --main-header-button-text-hover: rgba(255, 255, 255, 0.8);
+    --main-header-button-background: rgba(245, 245, 245, 0.76);
+
+  }
+}
+
 
 * {
   margin: 0;
@@ -28,11 +67,11 @@ SOFTWARE.
 }
 
 .main-stop {
-  stop-color: rgba(0, 172, 193, 1)
+  stop-color: var(--main-stop-color1)
 }
 
 .alt-stop {
-  stop-color: rgb(212, 0, 246);
+  stop-color: var(--main-stop-color);
 }
 
 .svg-container {
@@ -40,6 +79,8 @@ SOFTWARE.
   top: 0;
   right: 0;
   left: 0;
+  /* Create a gradient box shadow*/
+
   z-index: -1;
 }
 
@@ -52,8 +93,8 @@ main {
   padding: 10px;
   display: inline-block;
   color: rgba(255, 255, 255, 0.7);
-  background-color: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  background-color: var(--main-header-button-background);
+  border-color: var(--main-header-button-background-hover);
   border-style: solid;
   border-width: 2px;
   border-radius: 0.5rem;
@@ -62,16 +103,16 @@ main {
 }
 
 .btn:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--main-header-button-text-hover);
   text-decoration: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.3)
+  background-color: var(--main-header-button-background-hover);
+  border-color: var(--main-header-button-border);
 }
 
 
 header {
 
-  color: #fff;
+  color: var(--main-header-text-color);
   padding-top: 10vw;
   padding-bottom: 30vw;
   text-align: center;
@@ -83,13 +124,13 @@ svg {
 
 body {
   text-align: center;
-  background: #fff;
+  background: var(--main-background-top);
   color: #333;
   font-family: 'Ubuntu', sans-serif;
 }
 
 main {
-  background: linear-gradient(to bottom, #ffffff 0%, #dddee1 100%);
+  background: linear-gradient(to bottom, var(--main-background-top) 0%, var(--main-background-bottom) 100%);
   overflow: hidden;
   position: relative;
   align-items: center;
@@ -101,7 +142,7 @@ main {
 }
 
 footer {
-  background: #dddee1;
+  background: var(--main-background-bottom);
   padding: 5vh 0;
   text-align: center;
   position: relative;
@@ -115,8 +156,8 @@ footer {
   grid-template-rows: auto auto auto;
   gap: 0 0;
   border-radius: 20px;
-  border-color: rgba(0, 0, 0, 0.44);
-  background-color: rgba(225, 220, 220, 0.39);
+  border-color: var(--main-border-color);
+  background-color: var(--main-item-background-color);
   border-width: medium;
   border-style: solid;
   grid-template-areas:
@@ -138,7 +179,7 @@ footer {
   height: auto;
   overflow: hidden;
 
-  border-right: rgba(0, 0, 0, 0.82) 10px solid;
+  border-right: var(--main-color-black) 10px solid;
 }
 
 img {
@@ -177,9 +218,9 @@ img {
   text-align: left;
   padding: 10px;
   margin-right: 12px;
-  color: rgba(0, 0, 0, 0.44);
-  background-color: rgba(114, 114, 114, 0.13);
-  border-color: rgba(0, 0, 0, 0.82);
+  color: var(--main-border-color);
+  background-color: var(--main-item-button-hover);
+  border-color: var(--main-color-black);
   border-style: solid;
   border-width: 2px;
   border-radius: 0.5rem;
@@ -188,13 +229,13 @@ img {
 }
 
 .item-btn:hover {
-  color: rgba(0, 0, 0, 0.82);
+  color: var(--main-color-black);
   text-decoration: none;
-  background-color: rgba(114, 114, 114, 0.2);
-  border-color: rgba(0, 0, 0, 0.44);
+  background-color: var(--main-item-button-hover-background);
+  border-color: var(--main-border-color);
   transition: 0.2s;
 }
 
 .item:hover {
-  background-color: rgba(225, 220, 220, 0.39);
+  background-color: var(--main-item-background-color);
 }
