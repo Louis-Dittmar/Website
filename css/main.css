@@ -37,6 +37,7 @@ SOFTWARE.
     --main-header-button-background-hover: rgba(255, 255, 255, 0.2);
     --main-header-button-text-hover: rgba(255, 255, 255, 0.8);
     --main-header-button-background: rgba(255, 255, 255, 0.08);
+    --main-text-color: #fff;
   }
 }
 
@@ -45,18 +46,18 @@ SOFTWARE.
     --main-color-black: rgba(2, 2, 2, 0.71);
     --main-stop-color: rgb(212, 0, 246);
     --main-stop-color1: rgba(0, 172, 193, 1);
-    --main-background-bottom: #151518;
-    --main-background-top: #2b2a34;
+    --main-background-bottom: #2b2b2c;
+    --main-background-top: #3c3f41;
     --main-border-color: rgb(185, 185, 185);
-    --main-item-background-color: rgba(58, 57, 57, 0.68);
-    --main-item-button-hover: rgba(114, 114, 114, 0.13);
+    --main-item-background-color: rgb(43, 43, 44);
+    --main-item-button-hover: rgba(49, 49, 49, 0.73);
     --main-item-button-hover-background: rgba(166, 166, 166, 0.65);
     --main-header-text-color: #fff;
     --main-header-button-border: rgba(255, 255, 255, 0.4);
-    --main-header-button-background-hover: rgb(220, 205, 205);
-    --main-header-button-text-hover: rgba(255, 255, 255, 0.8);
-    --main-header-button-background: rgba(245, 245, 245, 0.76);
-
+    --main-header-button-background-hover: rgb(42, 42, 42);
+    --main-header-button-text-hover: rgb(140, 140, 140);
+    --main-header-button-background: rgba(87, 87, 87, 0.47);
+    --main-text-color: #fff;
   }
 }
 
@@ -139,6 +140,7 @@ main {
   display: flex;
   flex-direction: column;
   margin-top: -120px;
+  color: var(--main-text-color);
 }
 
 footer {
@@ -146,11 +148,12 @@ footer {
   padding: 5vh 0;
   text-align: center;
   position: relative;
+  color: var(--main-text-color);
 }
 
 .item {
   display: grid;
-  margin: 10px;
+  margin: 14px;
   grid-auto-columns: auto;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto auto;
