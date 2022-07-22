@@ -151,6 +151,8 @@ footer {
   color: var(--main-text-color);
 }
 
+
+
 .item {
   display: grid;
   margin: 14px;
