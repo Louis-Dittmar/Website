@@ -53,10 +53,17 @@
 
         @media  screen and  (min-width: 600px)  {
             .timer {
-                width: 500px;
+                width: 300px;
             }
+
         }
 
+        @media screen and (max-width: 600px) {
+          .timer {
+            width: 90%; /* Adjust width for smaller screens */
+            margin: 20px auto; /* Center timer */
+          }
+        }
         canvas {
             position: absolute;
             top: 0;
@@ -86,14 +93,21 @@
   const secondsCount = document.querySelector(".seconds");
   const level = document.querySelector(".grade");
   const context = canvas.getContext("2d");
-  const pugDimensions = { width: 339 * 1.2, height: 735 * 1.2 };
+  let pugDimensions = { width: 339, height: 735};
+
+  //if screen has less width than 700px, the pug will not be displayed
+  if (window.innerWidth < 700) {
+     pugDimensions = { width: 339 / 3, height: 735 / 3 };
+  } else {
+     pugDimensions = { width: 339, height: 735};
+  }
 
 
   const levels = {
     5: "Praktikant",
     10: "Anfänger",
     20: "Mitglied",
-    30: "hoffentlich ein Girl",
+    30: "Mitgleid+",
     60: "Ehrenwertes Mitglied",
     100: "Premium Mitglied",
     125: "Saufkompane",
