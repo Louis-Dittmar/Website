@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Date Ideen Generator</title>
+  <!-- Google Ads Script -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-DEINE-PUBLISHER-ID" crossorigin="anonymous"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    :root {
+      --bg-primary: #f8f9fa;
+      --bg-secondary: #e9ecef;
+      --bg-container: white;
+      --text-primary: #343a40;
+      --text-secondary: #6c757d;
+      --text-tertiary: #adb5bd;
+      --result-bg: #f8f9fa;
+      --tag-bg: #e9ecef;
+      --tag-text: #6c757d;
+      --button-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c);
+      --shadow-color: rgba(0, 0, 0, 0.1);
+      --header-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c, #6f42c1);
+      --shadow-button: 0 4px 15px rgba(232, 62, 140, 0.3);
+    }
+
+    [data-theme="dark"] {
+      --bg-primary: #121212;
+      --bg-secondary: #1e1e1e;
+      --bg-container: #2d2d2d;
+      --text-primary: #f8f9fa;
+      --text-secondary: #ced4da;
+      --text-tertiary: #adb5bd;
+      --result-bg: #1e1e1e;
+      --tag-bg: #383838;
+      --tag-text: #ced4da;
+      --button-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c);
+      --shadow-color: rgba(0, 0, 0, 0.3);
+      --header-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c, #6f42c1);
+      --shadow-button: 0 4px 15px rgba(232, 62, 140, 0.5);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    html, body {
+      height: 100%;
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      text-align: center;
+    }
+
+    .app-container {
+      width: 90%;
+      max-width: 550px;
+      background-color: var(--bg-container);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px var(--shadow-color);
+      padding: 15px;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-height: 90vh;
+    }
+
+    .app-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: var(--header-gradient);
+      border-radius: 20px 20px 0 0;
+    }
+
+    .content-wrapper {
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      padding: 5px;
+      max-height: 80vh;
+    }
+
+    h1 {
+      color: var(--text-primary);
+      margin-bottom: 0.8rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    h1 span {
+      background: var(--button-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .description {
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      font-size: 0.85rem;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .button-container {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .button {
+      background: var(--button-gradient);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-button);
+      position: relative;
+      overflow: hidden;
+      width: 80%;
+      max-width: 280px;
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: all 0.5s ease;
+    }
+
+    .button:hover, .button:active {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(232, 62, 140, 0.4);
+    }
+
+    .pulse-animation {
+      animation: pulse 0.5s infinite;
+    }
+
+    .button:hover::before {
+      left: 100%;
+    }
+
+    .button:active {
+      transform: translateY(1px);
+    }
+
+    .result-container {
+      background-color: var(--result-bg);
+      border-radius: 15px;
+      padding: 15px;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      margin-bottom: 0.8rem;
+    }
+
+    .result-text {
+      opacity: 1;
+      transition: opacity 0.3s ease;
+      font-size: 1rem;
+      color: var(--text-primary);
+      font-weight: 500;
+      text-align: center;
+      width: 100%;
+    }
+
+    .credits {
+      font-size: 0.7rem;
+      color: var(--text-tertiary);
+      margin-top: 0.7rem;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: var(--tag-bg);
+      color: var(--tag-text);
+      padding: 3px 8px;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      margin: 3px;
+      transition: all 0.3s ease;
+    }
+
+    .tag.active {
+      background-color: #e83e8c;
+      color: white;
+    }
+
+    .tag:hover, .tag:active {
+      background-color: #e83e8c;
+      color: white;
+      cursor: pointer;
+      transform: translateY(-2px);
+      box-shadow: 0 2px 8px rgba(232, 62, 140, 0.5);
+    }
+
+    .tags-container {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .heart-icon {
+      color: #e83e8c;
+      margin: 0 3px;
+    }
+
+    /* Verbesserte Feuerwerk-Effekte */
+    .pyro {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .pyro > .before, .pyro > .after {
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      box-shadow: 0 0 #fff;
+      animation: 1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards;
+      animation-duration: 1.25s, 1.25s, 6.25s;
+    }
+
+    .pyro > .after {
+      animation-delay: 0.5s, 0.5s, 2s;
+      animation-duration: 1.25s, 1.25s, 6.25s;
+    }
+
+    .pyro2 > .before, .pyro2 > .after {
+      animation-delay: 0.25s, 0.25s, 1s;
+      animation-duration: 1.5s, 1.5s, 5s;
+    }
+
+    .pyro3 > .before, .pyro3 > .after {
+      animation-delay: 0.75s, 0.75s, 3s;
+      animation-duration: 1.75s, 1.75s, 7s;
+    }
+
+    @keyframes bang {
+      to {
+        box-shadow:
+          -70px -115.67px #00ff73, 41px -82.67px #ff6f00, 65px -196.67px #ff9100,
+          -89px -179.67px #5900ff, 76px -238.67px #ffd500, -89px -96.67px #00ffa2,
+          7px -164.67px #ff00bf, -127px -146.67px #ff006a, -30px -203.67px #ff9500,
+          65px -4.67px #00eeff, 55px -28.67px #00ff8c, -113px -212.67px #00ff26,
+          -25px -191.67px #00d0ff, 5px -108.67px #ff7b00, 30px 7.33px #ff007b,
+          -77px 4.33px #ff006f, -4px -207.67px #b700ff, -8px -3.67px #ff0066,
+          -15px -131.67px #5eff00, 62px -249.67px #00ff62, 120px -150px #ff0000,
+          -120px -150px #0000ff, 200px -100px #00ff00, -200px -100px #ffff00,
+          150px -220px #ff00ff, -150px -220px #00ffff, 180px -50px #aa00ff,
+          -180px -50px #ff00aa, 100px -300px #aaff00, -100px -300px #00aaff;
+      }
+    }
+
+    @keyframes gravity {
+      to {
+        transform: translateY(200px);
+        opacity: 0;
+      }
+    }
+
+    @keyframes position {
+      0%, 19.9% {
+        margin-top: 5%;
+        margin-left: 40%;
+      }
+      20%, 39.9% {
+        margin-top: 15%;
+        margin-left: 30%;
+      }
+      40%, 59.9% {
+        margin-top: 10%;
+        margin-left: 70%;
+      }
+      60%, 79.9% {
+        margin-top: 20%;
+        margin-left: 20%;
+      }
+      80%, 99.9% {
+        margin-top: 15%;
+        margin-left: 80%;
+      }
+    }
+
+    /* Dark Mode Toggle */
+    .theme-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .theme-switch:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-switch svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--text-secondary);
+      transition: all 0.3s ease;
+    }
+
+    /* Verbesserte Touch-Unterstützung */
+    @media (hover: none) {
+      .button:hover {
+        transform: none;
+      }
+
+      .button:active {
+        transform: scale(0.98);
+      }
+    }
+
+    /* Responsives Design für kleine Bildschirme */
+    @media (max-height: 550px) {
+      .app-container {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .description {
+        font-size: 0.75rem;
+        margin-bottom: 0.7rem;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+
+      .result-text {
+        font-size: 0.9rem;
+      }
+
+      .result-container {
+        min-height: 60px;
+        padding: 10px;
+      }
+
+      .tag {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div id="fireworks" class="pyro" style="display: none;">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
+
+<div id="fireworks2" class="pyro pyro2" style="display: none;">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
+
+<div id="fireworks3" class="pyro pyro3" style="display: none;">
+  <div class="before"></div>
+  <div class="after"></div>
+</div>
+
+<div class="app-container">
+  <div class="content-wrapper">
+    <h1>Date Ideen <span>Generator</span></h1>
+
+    <p class="description">Finde mit nur einem Klick die perfekte Idee für dein nächstes Date!</p>
+
+    <div id="favorites-container" style="display:none; margin-bottom: 15px;">
+      <h3 style="font-size: 1rem; margin: 10px 0; color: var(--text-primary);">Deine Favoriten</h3>
+      <div id="favorites-list" class="tags-container" style="margin-top: 0;"></div>
+    </div>
+
+    <div class="button-container">
+      <button id="ideaButton" class="button">Date Idee finden</button>
+      <div class="theme-switch" id="themeSwitch">
+        <svg id="lightIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none;"><path d="M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm-9 4.5H1v-2h2v2zm20 0h-2v-2h2v2zM11 3v2h2V3h-2zm0 16v2h2v-2h-2zM5.64 5.64L4.22 4.22 5.64 5.64zm12.72 12.72l-1.42-1.42 1.42 1.42zM5.64 17.78l-1.42 1.42 1.42-1.42zm12.72-12.72l-1.42 1.42 1.42-1.42z"/></svg>
+        <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg>
+      </div>
+    </div>
+
+    <div class="result-container">
+      <div id="resultText" class="result-text">Drücke den Knopf für eine tolle Date Idee!</div>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 5px; margin-bottom: 10px;">
+      <button id="favoriteButton" style="display: none; background: none; border: none; color: #e83e8c; cursor: pointer; font-size: 1.2rem; padding: 5px;">
+        <span id="favoriteIcon">♡</span> Als Favorit speichern
+      </button>
+    </div>
+
+    <div class="tags-container">
+      <span class="tag" data-category="romantisch">Romantisch</span>
+      <span class="tag" data-category="abenteuer">Abenteuer</span>
+      <span class="tag" data-category="entspannt">Entspannt</span>
+      <span class="tag" data-category="kreativ">Kreativ</span>
+      <span class="tag" data-category="outdoor">Outdoor</span>
+    </div>
+
+    <p class="credits">Mit <span class="heart-icon">❤</span> erstellt für besondere Momente</p>
+
+    <div style="font-size: 0.7rem; color: var(--text-tertiary); margin-top: 5px;">
+      <button id="shareButton" style="background: none; border: none; color: var(--text-secondary); cursor: pointer; font-size: 0.8rem; padding: 5px; text-decoration: underline;">
+        Teilen
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Alle Date-Ideen mit Kategorien
+  const allDateIdeas = [
+    // Kreativ
+    {text: "Gemeinsam Sushi kochen", categories: ["kreativ", "entspannt"]},
+    {text: "Fondue-Abend veranstalten", categories: ["kreativ", "romantisch"]},
+    {text: "Burger selbst belegen", categories: ["kreativ", "entspannt"]},
+    {text: "Gemeinsam Kuchen backen", categories: ["kreativ", "entspannt"]},
+    {text: "Pralinen selber machen", categories: ["kreativ", "romantisch"]},
+    {text: "Fotoshooting (er fotografiert sie)", categories: ["kreativ", "romantisch"]},
+    {text: "Gegenseitiges Fotoshooting", categories: ["kreativ", "outdoor"]},
+    {text: "Fotoshooting an cooler Location (altes Industriegebiet)", categories: ["kreativ", "abenteuer"]},
+    {text: "Gemeinsamer IKEA/Möbelhaus-Besuch", categories: ["kreativ", "entspannt"]},
+    {text: "Cocktails selbst mixen", categories: ["kreativ", "romantisch"]},
+    {text: "Gemeinsam töpfern", categories: ["kreativ", "entspannt"]},
+    {text: "Mit Fingerfarben malen", categories: ["kreativ", "romantisch"]},
+    {text: "Landschaften malen", categories: ["kreativ", "entspannt"]},
+    {text: "Portraits voneinander malen", categories: ["kreativ", "romantisch"]},
+
+    // Aktiv
+    {text: "Bladen oder Skaten gehen", categories: ["aktiv", "outdoor"]},
+    {text: "Besuch in einer Rollerdisco", categories: ["aktiv", "abenteuer"]},
+    {text: "Frisbee spielen", categories: ["aktiv", "outdoor"]},
+    {text: "Badminton spielen", categories: ["aktiv", "outdoor"]},
+    {text: "Tischtennis spielen", categories: ["aktiv", "outdoor"]},
+    {text: "Speedminton spielen", categories: ["aktiv", "outdoor"]},
+    {text: "Paintball spielen", categories: ["aktiv", "abenteuer"]},
+    {text: "Erlebnispfade im Wald erkunden", categories: ["aktiv", "outdoor"]},
+    {text: "Indoor Klettern", categories: ["aktiv", "abenteuer"]},
+    {text: "Tretboot fahren", categories: ["aktiv", "romantisch", "outdoor"]},
+    {text: "Ruderboot fahren", categories: ["aktiv", "romantisch", "outdoor"]},
+    {text: "Mit dem Elektroboot fahren", categories: ["aktiv", "entspannt", "outdoor"]},
+    {text: "Mit dem Schlauchboot fahren", categories: ["aktiv", "abenteuer", "outdoor"]},
+    {text: "Schwimmen gehen", categories: ["aktiv", "outdoor"]},
+    {text: "Nachtschwimmen", categories: ["aktiv", "romantisch", "abenteuer"]},
+    {text: "Schwimmen im geschlossenen Freibad", categories: ["aktiv", "abenteuer", "romantisch"]},
+    {text: "Schlittschuhlaufen", categories: ["aktiv", "romantisch"]},
+    {text: "Schlittschuhlaufen mit Glühwein", categories: ["aktiv", "romantisch"]},
+    {text: "Schlittschuhlaufen in der Innenstadt", categories: ["aktiv", "romantisch"]},
+    {text: "Geocaching", categories: ["aktiv", "abenteuer", "outdoor"]},
+    {text: "Crossgolfen", categories: ["aktiv", "outdoor"]},
+    {text: "Probetanzstunde nehmen", categories: ["aktiv", "romantisch"]},
+    {text: "Tanzparty oder Salsaparty besuchen", categories: ["aktiv", "romantisch"]},
+    {text: "Billard spielen", categories: ["aktiv", "entspannt"]},
+    {text: "Minigolf spielen", categories: ["aktiv", "entspannt"]},
+    {text: "Skifahren gehen", categories: ["aktiv", "outdoor", "abenteuer"]},
+    {text: "Snowboarden gehen", categories: ["aktiv", "outdoor", "abenteuer"]},
+    {text: "Erlebnisbad besuchen", categories: ["aktiv", "entspannt"]},
+    {text: "Miramar besuchen", categories: ["aktiv", "entspannt"]},
+    {text: "Alpamare besuchen", categories: ["aktiv", "entspannt"]},
+    {text: "Thermenbesuch", categories: ["aktiv", "entspannt", "romantisch"]},
+    {text: "Schlittenfahren", categories: ["aktiv", "outdoor"]},
+    {text: "Nacht-Schlittenfahren", categories: ["aktiv", "outdoor", "romantisch"]},
+    {text: "Schlittenfahren mit Glühwein", categories: ["aktiv", "outdoor", "romantisch"]},
+    {text: "Bowling spielen", categories: ["aktiv", "entspannt"]},
+    {text: "Go-Kart fahren", categories: ["aktiv", "abenteuer"]},
+    {text: "Tandem fahren", categories: ["aktiv", "outdoor", "romantisch"]},
+    {text: "Drachen steigen lassen", categories: ["aktiv", "outdoor"]},
+    {text: "Canyoning", categories: ["aktiv", "abenteuer", "outdoor"]},
+    {text: "Schneemann oder Iglu bauen", categories: ["aktiv", "outdoor", "romantisch"]},
+    {text: "Schneeballschlacht", categories: ["aktiv", "outdoor"]},
+    {text: "Modellflugzeug fliegen", categories: ["aktiv", "outdoor"]},
+    {text: "Modellschiff fahren", categories: ["aktiv", "outdoor"]},
+    {text: "Modellauto fahren", categories: ["aktiv", "outdoor"]},
+    {text: "Kitesurf Schnupperkurs", categories: ["aktiv", "abenteuer", "outdoor"]},
+    {text: "Golf Schnupperstunden", categories: ["aktiv", "outdoor"]},
+    {text: "Erdbeeren pflücken", categories: ["aktiv", "outdoor", "romantisch"]},
+
+    // Chillig
+    {text: "Café oder Coffee Shop besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Shisha Café besuchen", categories: ["entspannt"]},
+    {text: "Lounge besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Gemütliche Bar besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Strandbar besuchen", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Gemeinsam shoppen gehen", categories: ["entspannt"]},
+    {text: "Schaufensterbummel machen", categories: ["entspannt", "romantisch"]},
+    {text: "Festival besuchen", categories: ["entspannt", "abenteuer"]},
+    {text: "Flohmarktbummel", categories: ["entspannt", "kreativ"]},
+    {text: "Gemeinsam Eis essen", categories: ["entspannt", "romantisch"]},
+    {text: "Spaziergang im Park", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Spaziergang im Schlosspark", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Waldspaziergang", categories: ["entspannt", "outdoor"]},
+    {text: "Nachtspaziergang mit Fackeln", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Wellnesstag zuhause", categories: ["entspannt", "romantisch"]},
+    {text: "Wellnesstag im Hotel", categories: ["entspannt", "romantisch"]},
+    {text: "Museumsbesuch", categories: ["entspannt", "kreativ"]},
+    {text: "Museum mit Versuchsvorführungen", categories: ["entspannt", "kreativ"]},
+    {text: "Interaktives Museum besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Ausstellung besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Körperwelten-Ausstellung besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Außergewöhnliche Ausstellung besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Interessante Messe besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Picknick mit Aussicht", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Picknick auf einem Dach", categories: ["entspannt", "romantisch", "abenteuer"]},
+    {text: "Picknick in schöner Natur", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Picknick vor toller Kulisse", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Picknick im Maisfeld", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Stadtführung machen", categories: ["entspannt", "kreativ"]},
+    {text: "Persönliche Stadtführung (von ihm für sie)", categories: ["entspannt", "romantisch", "kreativ"]},
+    {text: "Biergarten besuchen", categories: ["entspannt"]},
+    {text: "Ins Kino gehen", categories: ["entspannt", "romantisch"]},
+    {text: "Open Air Kino besuchen", categories: ["entspannt", "romantisch", "outdoor"]},
+    {text: "Autokino besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "3D/4D/IMAX-Kino besuchen", categories: ["entspannt", "abenteuer"]},
+    {text: "Theater besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "In die Oper gehen", categories: ["entspannt", "romantisch"]},
+    {text: "Musical besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Improtheater besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Improoper besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Schifffahrt machen", categories: ["entspannt", "romantisch"]},
+    {text: "Sauna besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Saunalandschaft besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Türkisches Hamam besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Sushibar besuchen", categories: ["entspannt"]},
+    {text: "Sushi-Fließband-Restaurant besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "Weihnachtsmarkt besuchen", categories: ["entspannt", "romantisch"]},
+    {text: "Lokales Kulturangebot besuchen", categories: ["entspannt", "kreativ"]},
+    {text: "DVD-Abend machen", categories: ["entspannt", "romantisch"]},
+    {text: "DVD-Abend an ungewöhnlichen Orten (im Kombi/im Zelt)", categories: ["entspannt", "romantisch", "kreativ"]},
+    {text: "Eishockeyspiel im Stadion anschauen", categories: ["entspannt", "abenteuer"]},
+    {text: "Fußballspiel anschauen", categories: ["entspannt", "abenteuer"]},
+    {text: "Formel 1 anschauen", categories: ["entspannt", "abenteuer"]},
+    {text: "Pyjama-Party", categories: ["entspannt", "romantisch"]},
+    {text: "Dinner zu Hause", categories: ["entspannt", "romantisch"]},
+    {text: "Dinner von einem Mietkoch zubereiten lassen", categories: ["entspannt", "romantisch"]},
+    {text: "Angeln gehen", categories: ["entspannt", "outdoor"]},
+    {text: "Weinprobe machen", categories: ["entspannt", "romantisch"]},
+    {text: "Brettspiele spielen", categories: ["entspannt", "kreativ"]},
+    {text: "Floating ausprobieren", categories: ["entspannt"]},
+
+    // Faszinierend
+    {text: "Aussichtsplattform des Flughafens besuchen", categories: ["faszinierend", "entspannt"]},
+    {text: "Aussichtsplattform auf Bergen besuchen", categories: ["faszinierend", "outdoor", "romantisch"]},
+    {text: "Aussichtsplattform auf Gebäuden besuchen", categories: ["faszinierend", "romantisch"]},
+    {text: "Aussichtsplattform bei Dunkelheit besuchen", categories: ["faszinierend", "romantisch"]},
+    {text: "Planetarium besuchen", categories: ["faszinierend", "romantisch"]},
+    {text: "Sternwarte besuchen", categories: ["faszinierend", "romantisch"]},
+    {text: "Natürliche Sehenswürdigkeiten besichtigen", categories: ["faszinierend", "outdoor"]},
+    {text: "Natürliche Sehenswürdigkeiten mit Proviant besichtigen", categories: ["faszinierend", "outdoor", "romantisch"]},
+    {text: "Burg oder Schloss besichtigen", categories: ["faszinierend", "romantisch"]},
+    {text: "Erlebnisrestaurant besuchen", categories: ["faszinierend", "romantisch"]},
+    {text: "Lying Dinner erleben", categories: ["faszinierend", "romantisch"]},
+    {text: "Restaurant auf Aussichtstürmen besuchen", categories: ["faszinierend", "romantisch"]},
+    {text: "Dunkelrestaurant besuchen", categories: ["faszinierend", "abenteuer", "romantisch"]},
+    {text: "Rittermahl erleben", categories: ["faszinierend", "abenteuer"]},
+    {text: "Zirkus besuchen", categories: ["faszinierend", "entspannt"]},
+    {text: "Hubschrauber-Rundflug", categories: ["faszinierend", "abenteuer", "romantisch"]},
+    {text: "Rundflug mit kleinem Flieger", categories: ["faszinierend", "abenteuer", "romantisch"]},
+    {text: "Aussichtsturm besuchen", categories: ["faszinierend", "romantisch"]},
+    {text: "Ballonfahrt machen", categories: ["faszinierend", "abenteuer", "romantisch"]},
+    {text: "Sterne beobachten", categories: ["faszinierend", "romantisch", "outdoor"]},
+    {text: "Sterne mit Teleskop beobachten", categories: ["faszinierend", "romantisch", "outdoor"]},
+    {text: "Salzbergwerk besichtigen", categories: ["faszinierend", "abenteuer"]},
+    {text: "Nostalgiefotos machen lassen", categories: ["faszinierend", "kreativ", "romantisch"]},
+    {text: "Escape Room besuchen", categories: ["faszinierend", "abenteuer"]},
+    {text: "Indoor Skydiving ausprobieren", categories: ["faszinierend", "abenteuer"]},
+
+    // Abenteuerlich
+    {text: "Zoo besuchen", categories: ["abenteuer", "outdoor"]},
+    {text: "Wildpark besuchen", categories: ["abenteuer", "outdoor"]},
+    {text: "Alpentierpark besuchen", categories: ["abenteuer", "outdoor"]},
+    {text: "Spielhalle besuchen", categories: ["abenteuer", "entspannt"]},
+    {text: "Karaoke Bar besuchen", categories: ["abenteuer", "kreativ"]},
+    {text: "Kissenschlacht machen", categories: ["abenteuer", "romantisch"]},
+    {text: "Kasino besuchen", categories: ["abenteuer", "entspannt"]},
+    {text: "Labyrinth im Maisfeld erkunden", categories: ["abenteuer", "outdoor", "romantisch"]},
+    {text: "Kurztrip in die Berge", categories: ["abenteuer", "outdoor", "romantisch"]},
+    {text: "Kurztrip nach Paris", categories: ["abenteuer", "romantisch"]},
+    {text: "Kurztrip ans Meer", categories: ["abenteuer", "outdoor", "romantisch"]},
+    {text: "Sommerrodelbahn ausprobieren", categories: ["abenteuer", "outdoor"]},
+    {text: "Freizeitpark besuchen", categories: ["abenteuer", "romantisch"]},
+    {text: "Westernpark besuchen", categories: ["abenteuer", "kreativ"]},
+    {text: "Floßfahrt machen", categories: ["abenteuer", "outdoor", "romantisch"]},
+    {text: "Bungee-Springen", categories: ["abenteuer", "outdoor"]},
+    {text: "Rafting ausprobieren", categories: ["abenteuer", "outdoor"]},
+    {text: "Bodyflying ausprobieren", categories: ["abenteuer"]},
+    {text: "Fallschirmspringen", categories: ["abenteuer", "outdoor"]},
+    {text: "Pilze suchen", categories: ["abenteuer", "outdoor"]},
+    {text: "Ausflug ins Blaue machen", categories: ["abenteuer", "romantisch"]},
+    {text: "Ritterfest besuchen", categories: ["abenteuer", "kreativ"]},
+    {text: "Segway Tour machen", categories: ["abenteuer", "outdoor"]},
+    {text: "Segeltour machen", categories: ["abenteuer", "outdoor", "romantisch"]},
+    {text: "Hochseilgarten besuchen", categories: ["abenteuer", "outdoor"]}
+  ];
+
+  const ideaButton = document.getElementById('ideaButton');
+  const resultText = document.getElementById('resultText');
+  const fireworks = document.getElementById('fireworks');
+  const tags = document.querySelectorAll('.tag');
+
+  let isSpinning = false;
+  let selectedCategory = null;
+
+  // Kategorie-Filter aktivieren
+        tags.forEach(tag => {
+            tag.addEventListener('click', function() {
+                if (this.classList.contains('active')) {
+                    // Wenn bereits aktiv, dann deaktivieren
+                    this.classList.remove('active');
+                    selectedCategory = null;
+                } else {
+                    // Alle anderen deaktivieren und diesen aktivieren
+                    tags.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    selectedCategory = this.getAttribute('data-category');
+                }
+            });
+        });
+
+        // Filtere Ideen nach ausgewählter Kategorie
+        function getFilteredIdeas() {
+            if (!selectedCategory) {
+                return allDateIdeas;
+            }
+
+            return allDateIdeas.filter(idea =>
+                idea.categories.includes(selectedCategory)
+            );
+        }
+
+        function generateRandomIdea() {
+            if (isSpinning) return;
+            isSpinning = true;
+
+            // Button-Animation
+            ideaButton.disabled = true;
+            ideaButton.textContent = "Generiere...";
+
+            // Verstecke Feuerwerk
+            fireworks.style.display = 'none';
+
+            // Filtere Ideen nach Kategorie
+            const filteredIdeas = getFilteredIdeas();
+
+            // Falls keine passenden Ideen gefunden
+            if (filteredIdeas.length === 0) {
+                resultText.textContent = "Keine passenden Ideen gefunden. Wähle eine andere Kategorie.";
+                ideaButton.disabled = false;
+                ideaButton.textContent = "Date Idee finden";
+                isSpinning = false;
+                return;
+            }
+
+            // Starte Animation durch schnelles Durchwechseln der Texte
+            let counter = 0;
+            const maxIterations = 15; // Etwas reduziert für Mobile
+            const initialSpeed = 50; // ms
+
+            function animateText() {
+                // Text ausblenden
+                resultText.style.opacity = '0';
+
+                setTimeout(() => {
+                    // Zufällige Date-Idee auswählen
+                    const randomIndex = Math.floor(Math.random() * filteredIdeas.length);
+                    resultText.textContent = filteredIdeas[randomIndex].text;
+
+                    // Text wieder einblenden
+                    resultText.style.opacity = '1';
+
+                    counter++;
+
+                    // Verlangsame die Geschwindigkeit gegen Ende
+                    const speed = initialSpeed + Math.floor(counter * counter / 4);
+
+                    if (counter < maxIterations) {
+                        setTimeout(animateText, speed);
+                    } else {
+                        // Animation beenden und Feuerwerk anzeigen
+                        setTimeout(() => {
+                            fireworks.style.display = 'block';
+                            ideaButton.disabled = false;
+                            ideaButton.textContent = "Date Idee finden";
+                            isSpinning = false;
+
+                            // Verstecke Feuerwerk nach 2 Sekunden
+                            setTimeout(() => {
+                                fireworks.style.display = 'none';
+                            }, 2000);
+                        }, 500);
+                    }
+                }, 100);
+            }
+
+            animateText();
+        }
+
+        ideaButton.addEventListener('click', generateRandomIdea);
+
+        // Für Touch-Geräte optimieren
+        document.addEventListener('touchstart', function() {}, {passive: true});
+    </script>
+</body>
+</html>
