@@ -22,7 +22,8 @@
   --shadow-button: 0 4px 15px rgba(232, 62, 140, 0.3);
 }
 
-[data-theme="dark"] {
+/* Change from [data-theme="dark"] to .dark-mode */
+.dark-mode {
   --bg-primary: #121212;
   --bg-secondary: #1e1e1e;
   --bg-container: #2d2d2d;

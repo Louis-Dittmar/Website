@@ -219,4 +219,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     animateText();
-  }});
+  }
+
+  // Initialisiere die App
+  loadFavorites();
+  initCategoryFilters();
+  initFavoriteButton();
+  initShareButton();
+
+  // Event Listener für den Ideen-Button hinzufügen
+  ideaButton.addEventListener('click', generateRandomIdea);
+
+  // Dark Mode / Light Mode Toggle
+  themeSwitch.addEventListener('click', function() {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+
+    // Icons umschalten
+    lightIcon.style.display = isDarkMode ? 'block' : 'none';
+    darkIcon.style.display = isDarkMode ? 'none' : 'block';
+
+    // Speichere Einstellung
+    localStorage.setItem('darkMode', isDarkMode);
+  });
+
+  // Dark Mode aus dem Local Storage laden
+  if(localStorage.getItem('darkMode') === 'true') {
+    body.classList.add('dark-mode');
+    lightIcon.style.display = 'block';
+    darkIcon.style.display = 'none';
+  } else {
+    lightIcon.style.display = 'none';
+    darkIcon.style.display = 'block';
+  }
+});
