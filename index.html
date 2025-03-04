@@ -1,191 +1,267 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <!--
-MIT License
-
-Copyright (c) 2022 Louis Dittmar
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
--->
   <meta charset="utf-8">
-  <title>Projekte</title>
-  <meta name="description" content="Meine Projekte">
+  <title>Meine Projekte</title>
+  <meta name="description" content="Portfolio von Louis Dittmar - Web Entwicklung Projekte">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Meine Projekte">
-  <meta property="og:type" content="Info">
-  <meta property="og:url" content="https://Louis-Dittmar.github.io/Website/">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <meta property="og:title" content="Louis Dittmar - Portfolio">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://louis-dittmar.github.io/Website/">
 
-  <meta name="theme-color" content="#fafafa">
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-<div class="svg-container">
-  <svg viewbox="0 0 800 400" class="svg">
-    <linearGradient id="gradient">
-      <stop class="main-stop" offset="0%" stop-opacity="1"/>
-      <stop class="alt-stop" offset="100%" stop-opacity="1"/>
-    </linearGradient>
-    <path fill="url(#gradient)" id="curve" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
-    </path>
-  </svg>
+<!-- Theme toggle button -->
+<div class="theme-toggle" id="themeToggle">
+  <i class="fas fa-moon"></i>
 </div>
-<header>
-  <h1>Meine HTML Projekte</h1>
-  <h3>Willkommen auf meiner Seite.</h3>
-  <br>
-  <a href="https://github.com/Louis-Dittmar/Website" class="btn">View on GitHub</a>
-  <a href="https://github.com/Louis-Dittmar/Website/archive/refs/heads/master.zip" class="btn">Download .zip</a>
-  <a href="https://github.com/Louis-Dittmar/Website/archive/master.tar.gz" class="btn">Download .tar.gz</a>
-</header>
-<main>
-  <!-- Item  Start -->
-  <div class="item">
-    <div class="img"><img src="img/ToDo2.png" alt="404"></div>
-    <div class="headline">To-Do-Liste | V2</div>
-    <div class="text">
-      <a>
-         </a>
-    </div>
-    <div class="buttons">
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/React-Code/public/index.html" class="item-btn">HTML -
-        Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/React-Code/src/App.css" class="item-btn">CSS -
-        Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/React-Code/src/App.js" class="item-btn">REACT -
-        Code</a>
-    </div>
-  </div>
-  <!-- Item End -->
-  <!-- Item  Start -->
-  <div class="item">
-    <div class="img"><img src="img/ToDo.png" alt="404"></div>
-    <div class="headline">To-Do-Liste | V1</div>
-    <div class="text">
-      <a>
-        Meine erste interaktive To-Do-Liste, bei der ich ein wenig JS verwendet habe. Dieses Projekt ist
-        abgeschlossen. </a>
-    </div>
-    <div class="buttons">
-      <a href="websites/ToDoList.html" class="item-btn">View</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/ToDoList.html" class="item-btn">HTML -
-        Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/ToDoList.css" class="item-btn">CSS - Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/js/ToDoList.js" class="item-btn">JS - Code</a>
-    </div>
-  </div>
-  <!-- Item End -->
-  <!-- Item  Start -->
-  <div class="item">
-    <div class="img"><img src="img/404.png" alt="404"></div>
-    <div class="headline">404 Page</div>
-    <div class="text">
-      <a>
 
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container" style="width: 100%; text-align: center;">
+    <h1>Louis Dittmar</h1>
+    <p>Webentwicklung & Designprojekte</p>
+    <div class="cta-buttons">
+      <a href="https://github.com/Louis-Dittmar/Website" class="cta-button github">
+        <i class="fab fa-github"></i> GitHub
       </a>
-    </div>
-    <div class="buttons">
-      <a href="404.html" class="item-btn">View</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/404.html" class="item-btn">HTML - Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/404.css" class="item-btn">CSS - Code</a>
+      <a href="https://github.com/Louis-Dittmar/Website/archive/refs/heads/master.zip" class="cta-button download">
+        <i class="fas fa-download"></i> Download .zip
+      </a>
+      <a href="https://github.com/Louis-Dittmar/Website/archive/master.tar.gz" class="cta-button download">
+        <i class="fas fa-download"></i> Download .tar.gz
+      </a>
+      <a href="#projects" class="cta-button">
+        <i class="fas fa-laptop-code"></i> Projekte ansehen
+      </a>
+      <a href="#contact" class="cta-button">
+        <i class="fas fa-envelope"></i> Kontakt
+      </a>
     </div>
   </div>
-  <!-- Item End -->
-  <!-- Item  Start -->
-  <div class="item">
-    <div class="img"><img src="img/FirstTry.PNG" alt="404"></div>
-    <div class="headline">Meine Projekte | V1</div>
-    <div class="text">
-      <a>
-        Mein erster Versuch, eine Seite über meine Projekte zu erstellen.
-        Dieses Projekt ist abgeschlossen.
-      </a>
-    </div>
-    <div class="buttons">
-      <a href="websites/FirstTry.html" class="item-btn">View</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/FirstTry.html" class="item-btn">HTML -
-        Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/FirstTry.css" class="item-btn">CSS - Code</a>
-    </div>
-  </div>
-  <!-- Item End -->
-  <!-- Item  Start -->
-  <div class="item">
-    <div class="img"><img src="img/Wasser.png" alt="404"></div>
-    <div class="headline">Wasser Page | V2</div>
-    <div class="text">
-      <a>
-        Der zweite versuch meine Webseite zu erstellen.
-      </a>
-    </div>
-    <div class="buttons">
-      <a href="websites/Wasser-Neu.html" class="item-btn">View</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/Wasser-Neu.html" class="item-btn">HTML -
-        Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/Wasser-Neu.css" class="item-btn">CSS - Code</a>
-    </div>
-  </div>
-  <!-- Item End -->
-  <!-- Item  Start -->
-  <div class="item">
-    <div class="img"><img src="img/WasserOld.png" alt="404"></div>
-    <div class="headline">Wasser Page | V1</div>
-    <div class="text">
-      <a>
-        Meine allererste Webseite, die ich erstellt habe.
-      </a>
-    </div>
-    <div class="buttons">
-      <a href="websites/Wasser-Old.html" class="item-btn">View</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/Wasser-Old.html" class="item-btn">HTML -
-        Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/Wasser-Old.css" class="item-btn">CSS - Code</a>
-    </div>
-  </div>
-  <!-- Item End -->
-  <div class="item">
-    <div class="img"><img src="img/date-ideen.png" alt="Date Ideen Generator"></div>
-    <div class="headline">Date Ideen Generator</div>
-    <div class="text">
-      <a>
-        Ein Generator für perfekte Date-Ideen mit nur einem Klick. Speichern Sie Ihre Favoriten und finden Sie Inspiration für Ihr nächstes Date.
-      </a>
-    </div>
-    <div class="buttons">
-      <a href="websites/Date-Ideen-Generator.html" class="item-btn">View</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/Date-Ideen-Generator.html" class="item-btn">HTML - Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/date-ideas.css" class="item-btn">CSS - Code</a>
-      <a href="https://github.com/Louis-Dittmar/Website/blob/master/js/date-ideas.js" class="item-btn">JS - Code</a>
-    </div>
+</section>
+
+<!-- Projects Section -->
+<section class="projects" id="projects">
+  <div class="section-title">
+    <h2>Meine Projekte</h2>
   </div>
 
-</main>
-<footer>
-  <h4>Gestaltet mit sehr viel ♥ von Louis Dittmar</h4>
-  <h5>Ich wünsche Ihnen noch einen schönen Tag</h5>
+  <div class="project-grid">
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="img/ToDo2.png" alt="To-Do-Liste V2" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">To-Do-Liste | V2</h3>
+        <p class="project-description">Eine verbesserte Version meiner To-Do-Liste, implementiert mit React.</p>
+        <div class="project-links">
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/React-Code/public/index.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/React-Code/src/App.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/React-Code/src/App.js" class="project-link">
+            <i class="fab fa-react"></i> React
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="img/ToDo.png" alt="To-Do-Liste V1" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">To-Do-Liste | V1</h3>
+        <p class="project-description">Meine erste interaktive To-Do-Liste, bei der ich ein wenig JS verwendet habe.</p>
+        <div class="project-links">
+          <a href="websites/ToDoList.html" class="project-link">
+            <i class="fas fa-eye"></i> Demo
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/ToDoList.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/ToDoList.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/js/ToDoList.js" class="project-link">
+            <i class="fab fa-js"></i> JS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-card">
+      <img src="img/404.png" alt="404 Page" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">404 Page</h3>
+        <p class="project-description">Eine kreative 404-Fehlerseite für meine Website.</p>
+        <div class="project-links">
+          <a href="404.html" class="project-link">
+            <i class="fas fa-eye"></i> Demo
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/404.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/404.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 4 -->
+    <div class="project-card">
+      <img src="img/FirstTry.PNG" alt="Meine Projekte V1" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">Meine Projekte | V1</h3>
+        <p class="project-description">Mein erster Versuch, eine Seite über meine Projekte zu erstellen.</p>
+        <div class="project-links">
+          <a href="websites/FirstTry.html" class="project-link">
+            <i class="fas fa-eye"></i> Demo
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/FirstTry.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/FirstTry.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-card">
+      <img src="img/Wasser.png" alt="Wasser Page V2" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">Wasser Page | V2</h3>
+        <p class="project-description">Der zweite Versuch meine Webseite zu erstellen.</p>
+        <div class="project-links">
+          <a href="websites/Wasser-Neu.html" class="project-link">
+            <i class="fas fa-eye"></i> Demo
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/Wasser-Neu.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/Wasser-Neu.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 6 -->
+    <div class="project-card">
+      <img src="img/WasserOld.png" alt="Wasser Page V1" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">Wasser Page | V1</h3>
+        <p class="project-description">Meine allererste Webseite, die ich erstellt habe.</p>
+        <div class="project-links">
+          <a href="websites/Wasser-Old.html" class="project-link">
+            <i class="fas fa-eye"></i> Demo
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/Wasser-Old.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/Wasser-Old.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 7 -->
+    <div class="project-card">
+      <img src="img/date-ideen.png" alt="Date Ideen Generator" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">Date Ideen Generator</h3>
+        <p class="project-description">Ein Generator für perfekte Date-Ideen mit nur einem Klick. Speichern Sie Ihre Favoriten und finden Sie Inspiration für Ihr nächstes Date.</p>
+        <div class="project-links">
+          <a href="websites/Date-Ideen-Generator.html" class="project-link">
+            <i class="fas fa-eye"></i> Demo
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/websites/Date-Ideen-Generator.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/date-ideas.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/js/date-ideas.js" class="project-link">
+            <i class="fab fa-js"></i> JS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 8 -->
+    <div class="project-card">
+      <img src="img/original-Index.png" alt="Alte Menu Webseite" class="project-image">
+      <div class="project-content">
+        <h3 class="project-title">Alte Menu Webseite</h3>
+        <p class="project-description">Meine Alte nicht mit Hilfe von KI Generierter Webseite, für diese Oberfläche</p>
+        <div class="project-links">
+          <a href="index-Original.html" class="project-link">
+            <i class="fas fa-eye"></i> Demo
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/index-Original.html" class="project-link">
+            <i class="fas fa-code"></i> HTML
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/css/index-html-original.css" class="project-link">
+            <i class="fas fa-palette"></i> CSS
+          </a>
+          <a href="https://github.com/Louis-Dittmar/Website/blob/master/js/index-html-original.js" class="project-link">
+            <i class="fab fa-js"></i> JS
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 9 -->
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="footer-content">
+    <h3>Kontakt</h3>
+    <p>Haben Sie Fragen oder möchten Sie mit mir zusammenarbeiten? Kontaktieren Sie mich über die folgenden Kanäle.</p>
+
+    <div class="social-links">
+      <a href="https://github.com/Louis-Dittmar" class="social-link" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+      <a href="mailto:louis.dittmar@gmx.de" class="social-link">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+
+    <p class="copyright">
+      Gestaltet mit sehr viel ♥ von Louis Dittmar
+    </p>
+
+    <div class="footer-links">
+      <a href="impressum.html" class="footer-link">Impressum</a>
+    </div>
+  </div>
 </footer>
-<!-- Add your site or application content here -->
-<script src="js/vendor/modernizr-3.11.2.min.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/main.js"></script>
+
+<!-- JavaScript -->
+<script src="js/index.js"></script>
 </body>
 </html>
