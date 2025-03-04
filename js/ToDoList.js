@@ -16,10 +16,10 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
   */
 
 
-var input = document.getElementById("userInput");
-var inputRemove = document.getElementById("ListElement");
-var list = document.getElementById("MyList")
-var I = 0;
+const input = document.getElementById("userInput");
+const inputRemove = document.getElementById("ListElement");
+const list = document.getElementById("MyList")
+const I = 0;
 
 
 input.addEventListener("keypress", function (event) {
