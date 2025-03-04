@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | Date Ideen Generator</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+    :root {
+      --bg-primary: #f8f9fa;
+      --bg-secondary: #e9ecef;
+      --bg-container: white;
+      --text-primary: #343a40;
+      --text-secondary: #6c757d;
+      --text-tertiary: #adb5bd;
+      --result-bg: #f8f9fa;
+      --tag-bg: #e9ecef;
+      --tag-text: #6c757d;
+      --button-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c);
+      --shadow-color: rgba(0, 0, 0, 0.1);
+      --header-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c, #6f42c1);
+      --shadow-button: 0 4px 15px rgba(232, 62, 140, 0.3);
+    }
+
+    .dark-mode {
+      --bg-primary: #121212;
+      --bg-secondary: #1e1e1e;
+      --bg-container: #2d2d2d;
+      --text-primary: #f8f9fa;
+      --text-secondary: #ced4da;
+      --text-tertiary: #adb5bd;
+      --result-bg: #1e1e1e;
+      --tag-bg: #383838;
+      --tag-text: #ced4da;
+      --button-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c);
+      --shadow-color: rgba(0, 0, 0, 0.3);
+      --header-gradient: linear-gradient(90deg, #ff6b6b, #e83e8c, #6f42c1);
+      --shadow-button: 0 4px 15px rgba(232, 62, 140, 0.5);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .app-container {
+      width: 90%;
+      max-width: 550px;
+      background-color: var(--bg-container);
+      border-radius: 20px;
+      box-shadow: 0 10px 30px var(--shadow-color);
+      padding: 15px;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .app-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8px;
+      background: var(--header-gradient);
+      border-radius: 20px 20px 0 0;
+    }
+
+    .content-wrapper {
+      padding: 15px;
+    }
+
+    h1 {
+      color: var(--text-primary);
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      font-size: 1.5rem;
+      position: relative;
+      display: inline-block;
+    }
+
+    h1 span {
+      background: var(--button-gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    h2 {
+      color: var(--text-secondary);
+      font-size: 1.2rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.7rem;
+      text-align: left;
+    }
+
+    p {
+      color: var(--text-primary);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .button {
+      background: var(--button-gradient);
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-button);
+      position: relative;
+      overflow: hidden;
+      margin-top: 2rem;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(232, 62, 140, 0.4);
+    }
+
+    .theme-switch {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--tag-bg);
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .theme-switch:hover {
+      transform: scale(1.1);
+    }
+
+    .theme-switch svg {
+      width: 22px;
+      height: 22px;
+      fill: var(--text-secondary);
+      transition: all 0.3s ease;
+    }
+
+    /* Responsives Design für kleine Bildschirme */
+    @media (max-width: 550px) {
+      .app-container {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+
+      .button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="app-container">
+  <div class="theme-switch" id="themeSwitch">
+    <svg id="lightIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display:none;"><path d="M12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3zm-9 4.5H1v-2h2v2zm20 0h-2v-2h2v2zM11 3v2h2V3h-2zm0 16v2h2v-2h-2zM5.64 5.64L4.22 4.22 5.64 5.64zm12.72 12.72l-1.42-1.42 1.42 1.42zM5.64 17.78l-1.42 1.42 1.42-1.42zm12.72-12.72l-1.42 1.42 1.42-1.42z"/></svg>
+    <svg id="darkIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"/></svg>
+  </div>
+
+  <div class="content-wrapper">
+    <h1>Impressum <span>Information</span></h1>
+
+    <h2>Angaben</h2>
+    <p>
+      Louis Dittmar<br>
+      Domänenstraße 3<br>
+      96476 Bad Rodach
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: louis.dittmar@gmx.de
+    </p>
+
+    <a href="index.html" class="button">Zurück zum Hauptmenü</a>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeSwitch = document.getElementById('themeSwitch');
+    const lightIcon = document.getElementById('lightIcon');
+    const darkIcon = document.getElementById('darkIcon');
+    const body = document.body;
+
+    // Dark Mode / Light Mode Toggle
+    themeSwitch.addEventListener('click', function() {
+      body.classList.toggle('dark-mode');
+      const isDarkMode = body.classList.contains('dark-mode');
+
+      // Icons umschalten
+      lightIcon.style.display = isDarkMode ? 'block' : 'none';
+      darkIcon.style.display = isDarkMode ? 'none' : 'block';
+
+      // Speichere Einstellung
+      localStorage.setItem('darkMode', isDarkMode);
+    });
+
+    // Dark Mode aus dem Local Storage laden
+    if(localStorage.getItem('darkMode') === 'true') {
+      body.classList.add('dark-mode');
+      lightIcon.style.display = 'block';
+      darkIcon.style.display = 'none';
+    } else {
+      lightIcon.style.display = 'none';
+      darkIcon.style.display = 'block';
+    }
+  });
+</script>
+</body>
+</html>
