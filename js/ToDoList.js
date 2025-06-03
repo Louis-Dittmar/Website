@@ -19,7 +19,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 const input = document.getElementById("userInput");
 const inputRemove = document.getElementById("ListElement");
 const list = document.getElementById("MyList")
-const I = 0;
+let I = 0;
 
 
 input.addEventListener("keypress", function (event) {
