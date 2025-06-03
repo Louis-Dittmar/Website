@@ -33,7 +33,7 @@ function App() {
     <container>
       <header>
         <h1>ToDo List</h1>
-        <input tpye="text" id="userInput" placeholder="Wasser, Eis, Karotten,..."
+        <input type="text" id="userInput" placeholder="Wasser, Eis, Karotten,..."
                onKeyPress={(event) => {
                  if (event.key === 'Enter') {
                    const newListe = [...liste, {
