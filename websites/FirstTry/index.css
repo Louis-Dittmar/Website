@@ -72,7 +72,7 @@ SOFTWARE.
   font-size: 50px;
   border-top: 10px solid var(--FirstTry-border-bottom);
   border-bottom: 10px solid var(--FirstTry-border-bottom);
-  background: url("../img/code.png") fixed;
+  background: url("../../img/code.png") fixed;
   grid-area: dia;
   color: var(--FirstTry-color);
 
@@ -90,7 +90,7 @@ SOFTWARE.
 .headline {
 
   text-align: center;
-  background: url("../img/code.png") fixed;
+  background: url("../../img/code.png") fixed;
 }
 
 .Item-Container {
