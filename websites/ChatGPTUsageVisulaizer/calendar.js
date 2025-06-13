@@ -22,8 +22,9 @@
       const label = document.createElement('div');
       label.className = 'month-label';
       label.textContent = m;
-      label.style.gridColumnStart = startWeek + 1;
-      label.style.gridColumnEnd = `span ${spanWeeks}`;
+      label.style.gridRowStart = startWeek + 1;
+      label.style.gridRowEnd = `span ${spanWeeks}`;
+      label.style.gridColumnStart = 1;
       calendar.appendChild(label);
     });
 
@@ -34,8 +35,8 @@
       const cell = document.createElement('div');
       cell.className = 'day';
       cell.dataset.date = d.toISOString().split('T')[0];
-      cell.style.gridColumnStart = weekIndex + 1;
-      cell.style.gridRowStart = dow + 2;
+      cell.style.gridRowStart = weekIndex + 1;
+      cell.style.gridColumnStart = dow + 2;
       calendar.appendChild(cell);
     }
 
@@ -43,7 +44,8 @@
       const label = document.createElement('div');
       label.className = 'week-label';
       label.textContent = (w + 1);
-      label.style.gridColumnStart = w + 1;
+      label.style.gridRowStart = w + 1;
+      label.style.gridColumnStart = 9;
       calendar.appendChild(label);
     }
   }
