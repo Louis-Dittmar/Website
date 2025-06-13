@@ -5,11 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ChatGPT Usage Calendar</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined" rel="stylesheet">
 </head>
 <body>
+  <h1>ChatGPT Nutzungskalender</h1>
+  <form class="form-container" enctype="multipart/form-data">
+    <div class="upload-files-container">
+      <div class="drag-file-area">
+        <span class="material-icons-outlined upload-icon">file_upload</span>
+        <h3 class="dynamic-message">Datei hierher ziehen</h3>
+        <label class="label">oder <span class="browse-files"> <input type="file" class="default-file-input"/> <span class="browse-files-text">Datei auswählen</span> <span>vom Gerät</span> </span></label>
+      </div>
+      <span class="cannot-upload-message"><span class="material-icons-outlined">error</span> Bitte wähle zuerst eine Datei aus <span class="material-icons-outlined cancel-alert-button">cancel</span></span>
+      <div class="file-block">
+        <div class="file-info"><span class="material-icons-outlined file-icon">description</span> <span class="file-name"></span> | <span class="file-size"></span></div>
+        <span class="material-icons remove-file-icon">delete</span>
+        <div class="progress-bar"></div>
+      </div>
+      <button type="button" class="upload-button">Upload</button>
+    </div>
+  </form>
   <div class="calendar-container">
     <div class="calendar" id="calendar"></div>
   </div>
+  <script src="upload.js"></script>
   <script src="calendar.js"></script>
   <script>
     // Beispiel: Kalender für das aktuelle Jahr erzeugen
