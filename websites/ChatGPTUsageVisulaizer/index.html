@@ -1,49 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatGPT Usage Visualizer</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatGPT Usage Calendar</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <h1>ChatGPT Usage Visualizer</h1>
-  <p class="description">Visualisierung deiner ChatGPT Nutzung im Jahr 2024, ähnlich wie die GitHub Jahresansicht.</p>
-
-  <div class="controls">
-    <div class="data-input">
-      <h2>Daten eingeben</h2>
-      <div class="input-group">
-        <label for="date-input">Datum:</label>
-        <input id="date-input" max="2024-12-31" min="2024-01-01" type="date">
-      </div>
-      <div class="input-group">
-        <label for="usage-input">Anzahl der Nutzungen:</label>
-        <input id="usage-input" max="50" min="0" type="number" value="1">
-      </div>
-      <button id="add-data-btn">Hinzufügen</button>
-      <button id="generate-random-btn">Zufallsdaten generieren</button>
-      <button id="clear-data-btn">Daten zurücksetzen</button>
-      <div class="input-group">
-        <label for="show-counts">Nutzungszahlen anzeigen:</label>
-        <input id="show-counts" type="checkbox">
-      </div>
-      <div class="input-group">
-        <label for="show-months">Monatsanzeige anzeigen:</label>
-        <input checked id="show-months" type="checkbox">
-      </div>
-      <div class="input-group">
-        <label for="show-weeks">Wochenzahlen anzeigen:</label>
-        <input checked id="show-weeks" type="checkbox">
-      </div>
-    </div>
-  </div>
-
   <div class="calendar-container">
     <div class="calendar" id="calendar"></div>
   </div>
-</div>
-    <script src="script.js"></script>
+  <script src="calendar.js"></script>
+  <script>
+    // Beispiel: Kalender für das aktuelle Jahr erzeugen
+    createCalendar(document.getElementById('calendar'), new Date().getFullYear());
+  </script>
 </body>
 </html>
