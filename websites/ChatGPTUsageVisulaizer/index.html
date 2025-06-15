@@ -31,8 +31,19 @@
   <script src="upload.js"></script>
   <script src="calendar.js"></script>
   <script>
-    // Beispiel: Kalender für das aktuelle Jahr erzeugen
-    createCalendar(document.getElementById('calendar'), new Date().getFullYear());
+    // Beispielwerte für den Kalender
+    const beispielDaten = {
+      '2024-01-03': 2,
+      '2024-02-14': 5,
+      '2024-03-01': 8,
+      '2024-05-20': 4,
+      '2024-07-10': 11
+    };
+    createCalendar(
+      document.getElementById('calendar'),
+      new Date().getFullYear(),
+      beispielDaten
+    );
   </script>
 </body>
 </html>

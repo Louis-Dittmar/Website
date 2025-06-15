@@ -1,7 +1,15 @@
 (function() {
   const monthNames = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
 
-  function createCalendar(calendar, year) {
+  function usageLevel(count) {
+    if (count <= 0) return 0;
+    if (count <= 3) return 1;
+    if (count <= 6) return 2;
+    if (count <= 10) return 3;
+    return 4;
+  }
+
+  function createCalendar(calendar, year, data = {}) {
     year = year || new Date().getFullYear();
     calendar.innerHTML = '';
 
@@ -22,9 +30,8 @@
       const label = document.createElement('div');
       label.className = 'month-label';
       label.textContent = m;
-      label.style.gridRowStart = startWeek + 1;
-      label.style.gridRowEnd = `span ${spanWeeks}`;
-      label.style.gridColumnStart = 1;
+      label.style.gridColumnStart = startWeek + 1;
+      label.style.gridColumnEnd = `span ${spanWeeks}`;
       calendar.appendChild(label);
     });
 
@@ -34,9 +41,15 @@
       const weekIndex = Math.floor((dayCount + firstDow) / 7);
       const cell = document.createElement('div');
       cell.className = 'day';
-      cell.dataset.date = d.toISOString().split('T')[0];
-      cell.style.gridRowStart = weekIndex + 1;
-      cell.style.gridColumnStart = dow + 2;
+      const dateStr = d.toISOString().split('T')[0];
+      cell.dataset.date = dateStr;
+      cell.style.gridColumnStart = weekIndex + 1;
+      cell.style.gridRowStart = dow + 2;
+      const count = data[dateStr] || 0;
+      const level = usageLevel(count);
+      if (level > 0) {
+        cell.classList.add('level-' + level);
+      }
       calendar.appendChild(cell);
     }
 
@@ -44,8 +57,7 @@
       const label = document.createElement('div');
       label.className = 'week-label';
       label.textContent = (w + 1);
-      label.style.gridRowStart = w + 1;
-      label.style.gridColumnStart = 9;
+      label.style.gridColumnStart = w + 1;
       calendar.appendChild(label);
     }
   }
