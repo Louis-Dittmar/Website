@@ -1,7 +1,7 @@
 (function() {
   const monthNames = ['Jan', 'Feb', 'Mär', 'Apr', 'Mai', 'Jun', 'Jul', 'Aug', 'Sep', 'Okt', 'Nov', 'Dez'];
 
-  function createCalendar(calendar, year) {
+  function createCalendar(calendar, year, data = {}) {
     year = year || new Date().getFullYear();
     calendar.innerHTML = '';
 
@@ -17,14 +17,14 @@
       const offset = (first.getDay() + 6) % 7;
       const days = new Date(year, mi + 1, 0).getDate();
       const monthStartDayIndex = (first - firstOfYear) / (1000 * 60 * 60 * 24);
-      const startWeek = Math.floor((monthStartDayIndex + firstDow) / 7);
+      const week = Math.floor((monthStartDayIndex + firstDow) / 7);
       const spanWeeks = Math.ceil((offset + days) / 7);
       const label = document.createElement('div');
       label.className = 'month-label';
       label.textContent = m;
-      label.style.gridRowStart = startWeek + 1;
-      label.style.gridRowEnd = `span ${spanWeeks}`;
-      label.style.gridColumnStart = 1;
+      label.style.gridColumnStart = week + 1;
+      label.style.gridColumnEnd = `span ${spanWeeks}`;
+      label.style.gridRowStart = 1;
       calendar.appendChild(label);
     });
 
@@ -35,17 +35,20 @@
       const cell = document.createElement('div');
       cell.className = 'day';
       cell.dataset.date = d.toISOString().split('T')[0];
-      cell.style.gridRowStart = weekIndex + 1;
-      cell.style.gridColumnStart = dow + 2;
+      cell.style.gridColumnStart = weekIndex + 1;
+      cell.style.gridRowStart = dow + 2;
+      if (data[cell.dataset.date] !== undefined) {
+        cell.textContent = data[cell.dataset.date];
+      }
       calendar.appendChild(cell);
     }
 
     for (let w = 0; w < weeks; w++) {
       const label = document.createElement('div');
       label.className = 'week-label';
-      label.textContent = (w + 1);
-      label.style.gridRowStart = w + 1;
-      label.style.gridColumnStart = 9;
+      label.textContent = w + 1;
+      label.style.gridColumnStart = w + 1;
+      label.style.gridRowStart = 9;
       calendar.appendChild(label);
     }
   }
