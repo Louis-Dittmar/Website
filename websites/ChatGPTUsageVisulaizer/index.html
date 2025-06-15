@@ -31,8 +31,15 @@
   <script src="upload.js"></script>
   <script src="calendar.js"></script>
   <script>
-    // Beispiel: Kalender für das aktuelle Jahr erzeugen
-    createCalendar(document.getElementById('calendar'), new Date().getFullYear());
+    const calEl = document.getElementById('calendar');
+    createCalendar(calEl, new Date().getFullYear());
+
+    // Beispielwerte zufällig generieren
+    const sampleData = {};
+    calEl.querySelectorAll('.day').forEach(cell => {
+      sampleData[cell.dataset.date] = Math.floor(Math.random() * 5);
+    });
+    applyUsageData(calEl, sampleData);
   </script>
 </body>
 </html>
