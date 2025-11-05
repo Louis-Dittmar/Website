@@ -210,11 +210,139 @@ const texts = [
     "categories": ["trinken", "frech"]
   },
   {
-    "text": "Wenn Doppelmoral ein Tier wäre, wärst du ein Chamäleon auf Speed.",
-    "categories": ["tiere", "frech"]
-  },
-  {
     "text": "Du bist wie ein Pfau – viel Feder, wenig Substanz.",
     "categories": ["tiere", "sarkastisch"]
-  }
+  },
+  {
+    "text": "Wenn man mit dir Redet, lästert gleich die ganze Stadt über mich.",
+    "categories": ["tiere", "sarkastisch"]
+  },
+  {
+    "text": "Wenn man mit dir Redet, lästert gleich die ganze Stadt über mich.",
+    "categories": ["tiere", "sarkastisch"]
+  },
+  {
+    "text": "Deine Brüste sind flacher als dein Respekt.",
+    "categories": ["tiere", "sarkastisch"]
+  },
+  {
+    "text": "Das N in deinem Namen steht für 'niemals ehrlich'.",
+    "categories": ["frech", "sarkastisch"]
+  },
+  {
+    "text": "Das N in deinem Namen steht für 'nach Aufmerksamkeit süchtig'.",
+    "categories": ["frech", "bissig"]
+  },
+  {
+    "text": "Das N in deinem Namen steht für 'nein danke'.",
+    "categories": ["kurz", "trocken"]
+  },
+  {
+    "text": "Das N in deinem Namen steht für 'negative Energie auf zwei Beinen'.",
+    "categories": ["frech", "bissig"]
+  },
+  {
+    "text": "Das N in deinem Namen steht für 'nichts als Drama'.",
+    "categories": ["frech", "social"]
+  },
+  {
+    "text": "Das N in deinem Namen steht für 'nicht mein Problem, aber trotzdem nervig'.",
+    "categories": ["sarkastisch", "trocken"]
+  },
+  {
+    "text": "Das N in deinem Namen steht für 'nie reflektiert, immer laut'.",
+    "categories": ["frech", "bissig"]
+  },
+  {
+    "text": "Das E in deinem Namen steht für 'ewig anstrengend'.",
+    "categories": ["frech", "bissig"]
+  },
+  {
+    "text": "Das E in deinem Namen steht für 'egozentrisch bis zum Anschlag'.",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Das E in deinem Namen steht für 'Energie saugen statt geben'.",
+    "categories": ["frech", "bitter"]
+  },
+  {
+    "text": "Das E in deinem Namen steht für 'ewig beleidigt'.",
+    "categories": ["frech", "kurz"]
+  },
+  {
+    "text": "Das E in deinem Namen steht für 'Erinnerung, die keiner behalten will'.",
+    "categories": ["bitter", "sarkastisch"]
+  },
+  {
+    "text": "Das E in deinem Namen steht für 'exakt null Selbstreflexion'.",
+    "categories": ["sarkastisch", "bitter"]
+  },
+  {
+    "text": "Ich weiß wir sind gerade beide Traurig, aber sind wir auch beide Horny?",
+    "categories": ["sarkastisch", "bitter"]
+  },
+  {
+    "text": "Dein Safewort wäre 'Kannst du das bitte machen",
+    "categories": ["sarkastisch", "bitter"]
+  },
+  {
+    "text": "Dein Safewort wäre 'Kannst du das bitte machen",
+    "categories": ["sarkastisch", "bitter"]
+  },
+  {
+    "text": "Beeindruckend, wie konsequent bei dir alles klein ist, vom Respekt bis zur Oberweite.",
+    "categories": ["sarkastisch", "bitter"]
+  },
+  {
+    "text": "Nach dem ersten date mir dir, sind alle Männer mit denen du etwas hattest Schwul.",
+    "categories": ["sarkastisch", "bitter"]
+  },
+  {
+    "text": "Irgendwie werden alle Typen nach dir schwul. Muss an deinem Charme liegen.",
+    "categories": ["sarkastisch", "bitter"]
+  },
+  {
+    "text": "Wenn Einbildung eine Währung wäre, wärst du Millionärin.",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Du bist wie ein schlechter Screenshot – unscharf, überflüssig und peinlich, wenn man’s zeigt.",
+    "categories": ["social", "bissig"]
+  },
+  {
+    "text": "Nach dir sind Männer nicht mehr hetero, nur noch hoffnungslos.",
+    "categories": ["social", "bissig"]
+  },
+  {
+    "text": "Deine Dates verlaufen wie dein Charakter, steil bergab.",
+    "categories": ["dating", "frech"]
+  },
+  {
+    "text": "Du bist die Art Ex, wegen der Leute sagen: 'Ich bleib lieber Single.'",
+    "categories": ["dating", "bissig"]
+  },
+  {
+    "text": "Du hast die Romantik einer Steuererklärung.",
+    "categories": ["dating", "trocken"]
+  },
+  {
+    "text": "Du bist der Grund, warum Ghosting erfunden wurde.",
+    "categories": ["dating", "frech"]
+  },
+  {
+    "text": "Du bist der Grund, warum Leute leiber alleine Bleiben.",
+    "categories": ["dating", "bitter"]
+  },
+  {
+    "text": "Wenn Fremdscham ein Tanzstil wäre, du wärst die Choreografin.",
+    "categories": ["tanzen", "bissig"]
+  },
+  {
+    "text": "Deine Tanzmoves sehen aus, als wärst du von einem Geist mit zwei linken Füßen besessen.",
+    "categories": ["tanzen", "frech"]
+  },
+  {
+    "text": "Deine Art zu tanzen ist der Grund, warum Clubs dunkles Licht haben.",
+    "categories": ["tanzen", "frech"]
+  },
 ];
