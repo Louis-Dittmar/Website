@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Zufallsgenerator</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 800px;
+      width: 100%;
+    }
+
+    .text-display {
+      font-size: clamp(1.2rem, 5vw, 2.5rem);
+      margin-bottom: 60px;
+      min-height: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 1px;
+      line-height: 1.4;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .text-display {
+        min-height: 120px;
+        margin-bottom: 40px;
+      }
+    }
+
+    .text-display.animate {
+      animation: flicker 0.05s;
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.3;
+      }
+    }
+
+    .text-display.generating {
+      color: #888;
+      font-size: clamp(1rem, 4vw, 2rem);
+    }
+
+    button {
+      background-color: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 15px 50px;
+      font-size: clamp(0.9rem, 3vw, 1.2rem);
+      font-family: 'Courier New', monospace;
+      cursor: pointer;
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 768px) {
+      button {
+        padding: 12px 35px;
+        letter-spacing: 1px;
+      }
+    }
+
+    button:hover {
+      background-color: #fff;
+      color: #000;
+      transform: scale(1.05);
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    button:disabled:hover {
+      background-color: transparent;
+      color: #fff;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="text-display" id="textDisplay">
+    Drücke den Knopf für einen zufälligen Text
+  </div>
+  <button id="tryAgainBtn" onclick="generateRandomText()">Try Again</button>
+</div>
+
+<script src="texts.js"></script>
+<script>
+  let isGenerating = false;
+
+  function generateRandomText() {
+    if (isGenerating) return;
+    if (!texts || texts.length === 0) {
+      alert('Keine Texte gefunden. Bitte texts.js Datei überprüfen.');
+      return;
+    }
+
+    isGenerating = true;
+    const display = document.getElementById('textDisplay');
+    const button = document.getElementById('tryAgainBtn');
+    button.disabled = true;
+
+    // Generierungs-Animation
+    display.classList.add('generating');
+    let counter = 0;
+    const maxIterations = 15;
+
+    const interval = setInterval(() => {
+      const randomIndex = Math.floor(Math.random() * texts.length);
+      display.textContent = texts[randomIndex].text;
+      display.classList.add('animate');
+
+      setTimeout(() => {
+        display.classList.remove('animate');
+      }, 50);
+
+      counter++;
+
+      if (counter >= maxIterations) {
+        clearInterval(interval);
+        display.classList.remove('generating');
+        isGenerating = false;
+        button.disabled = false;
+      }
+    }, 100);
+  }
+</script>
+</body>
+</html>
