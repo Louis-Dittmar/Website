@@ -108,5 +108,45 @@ const texts = [
   {
     "text": "Du bist das Mädchen, das die Mathehausaufgaben ihrer Freundinnen macht, während sie sich mit deinem Schwarm rumknutschen.",
     "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Ich wette, du wärst wirklich hübsch, wenn du nicht so aussehen würdest.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Du siehst aus, als wärst du mit einer Tinder-Vorlage gebaut worden.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Du siehst aus wie jemand, der ständig die gleichen Selfies auf Instagram postet, anstatt einfach mal eine Persönlichkeit zu haben.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Die Zeit, die du gebraucht hast, um deine Posts zu machen, ist länger als all deine Beziehungen zusammen.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Du siehst aus wie der Typ Mensch, der Popcorn mit einem Löffel isst.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Dein Gesicht sagt „Ich weine beim Sex“, aber dein aussehen sagt „Ich habe keinen Sex“.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Aber immerhin hast du noch den Ring, Gollum. Obwohl, nein selbst der Ring hat dich verlassen.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Deine Zeit rennt, in 4 Jahren steht niemand mehr auf dich!",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Wow, du scheinst männliche Aufmerksamkeit ja wirklich zu lieben.",
+    "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Du siehst aus wie das Mädchen in der 4. Klasse, das ständig damit angibt, wie viele Bücher es in einer Woche liest.",
+    "categories": ["social", "sarkastisch"]
   }
 ];
