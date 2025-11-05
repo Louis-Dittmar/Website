@@ -148,5 +148,73 @@ const texts = [
   {
     "text": "Du siehst aus wie das Mädchen in der 4. Klasse, das ständig damit angibt, wie viele Bücher es in einer Woche liest.",
     "categories": ["social", "sarkastisch"]
+  },
+  {
+    "text": "Wenn Ignoranz leuchten würde, wärst du ein Leuchtturm.",
+    "categories": ["frech", "sarkastisch"]
+  },
+  {
+    "text": "Wenn Oberflächlichkeit ein Beruf wäre, wärst du CEO.",
+    "categories": ["social", "frech"]
+  },
+  {
+    "text": "Wenn Lästern Kalorien verbrennen würde, wärst du längst Model.",
+    "categories": ["frech", "witzig"]
+  },
+  {
+    "text": "Ich glaub, dein größtes Talent ist, Erwartungen zu untertreffen.",
+    "categories": ["sarkastisch", "trocken"]
+  },
+  {
+    "text": "Dein Humor ist wie dein Stil – irgendwo zwischen peinlich und 2009.",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Wenn dein Kuchen so süß wäre wie dein Charakter, wäre er ungenießbar.",
+    "categories": ["backen", "frech"]
+  },
+  {
+    "text": "Du bist der Grund, warum Rauchmelder Angst haben.",
+    "categories": ["kochen", "sarkastisch"]
+  },
+  {
+    "text": "Du erinnerst mich an Hefeteig – viel Drama, wenig Wachstum.",
+    "categories": ["backen", "witzig"]
+  },
+  {
+    "text": "Deine Plätzchen könnten als Waffe durchgehen – hart, kalt und gefährlich.",
+    "categories": ["backen", "witzig"]
+  },
+  {
+    "text": "Du bist wie ein Thermomix – laut, teuer und überschätzt.",
+    "categories": ["alltag", "frech"]
+  },
+  {
+    "text": "Wenn Peinlichkeit Prozente hätte, wärst du Doppelkorn.",
+    "categories": ["trinken", "frech"]
+  },
+  {
+    "text": "Du trinkst, als wäre Selbstachtung etwas, das man verdünnen kann.",
+    "categories": ["trinken", "bissig"]
+  },
+  {
+    "text": "Du bist der Grund, warum Barkeeper kündigen.",
+    "categories": ["trinken", "frech"]
+  },
+  {
+    "text": "Du nennst es 'Mädelsabend', ich nenne es 'charakterlichen Verfall mit Deko'.",
+    "categories": ["trinken", "sarkastisch"]
+  },
+  {
+    "text": "Du brauchst keinen Alkohol, um peinlich zu sein – er beschleunigt’s nur.",
+    "categories": ["trinken", "frech"]
+  },
+  {
+    "text": "Wenn Doppelmoral ein Tier wäre, wärst du ein Chamäleon auf Speed.",
+    "categories": ["tiere", "frech"]
+  },
+  {
+    "text": "Du bist wie ein Pfau – viel Feder, wenig Substanz.",
+    "categories": ["tiere", "sarkastisch"]
   }
 ];
