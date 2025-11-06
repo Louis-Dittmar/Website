@@ -345,4 +345,100 @@ const texts = [
     "text": "Deine Art zu tanzen ist der Grund, warum Clubs dunkles Licht haben.",
     "categories": ["tanzen", "frech"]
   },
+  {
+    "text": "Deine Liebe zur Schokolade ist das Einzige an dir, das süß ist.",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Du feierst, als wäre das dein Beruf. Schade, dass du beim Helfen immer Urlaub hast.",
+    "categories": ["faulheit", "frech"]
+  },
+  {
+    "text": "Du trinkst Cocktails wie deine Ausreden – schnell, billig und zu viel.",
+    "categories": ["trinken", "frech"]
+  },
+  {
+    "text": "Sie tanzt, als gäbe es Preise fürs Peinlichsein.",
+    "categories": ["tanzen", "frech"]
+  },
+  {
+    "text": "Sie sagt, sie liebt Schokolade – irgendwas muss sie ja mögen.",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Es gibt einen Grund, warum alle gehen, wenn sie kommt.",
+    "categories": ["sozial", "gemein"]
+  },
+  {
+    "text": "Sie verzieht ihr Gesicht auf jedem Snap, weil das Original keiner sehen will.",
+    "categories": ["aussehen", "frech"]
+  },
+  {
+    "text": "Gibt’s dich auch in süß?",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Bei dir wusste man wohl noch nicht, dass Abtreibung legal ist.",
+    "categories": ["beleidigend", "tabu"]
+  },
+  {
+    "text": "Für dich hat eine Frau ihre Muschi ruiniert.",
+    "categories": ["beleidigend", "tabu"]
+  },
+  {
+    "text": "Immer wenn ich dich sehe, denke ich mir: Wie wolltest du denn eigentlich aussehen?",
+    "categories": ["aussehen", "sarkastisch"]
+  },
+  {
+    "text": "Bei dir fragt man sich, wie man dich fickbar in zwei Stunden bekommt.",
+    "categories": ["sexuell", "beleidigend"]
+  },
+  {
+    "text": "Du brauchst keinen Sport machen. Es gibt keine Übungen für Charakter.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Wann denkst du, fängt man an zu sehen, dass du existierst?",
+    "categories": ["existenz", "sarkastisch"]
+  },
+  {
+    "text": "Es freut mich, dass du versuchst, dich um deinen Körper zu kümmern. Aber du weißt schon, dass dein Gesicht einfach hässlich ist.",
+    "categories": ["aussehen", "gemein"]
+  },
+  {
+    "text": "Du bist die einzige die beim Sport noch zunimmt.",
+    "categories": ["aussehen", "gemein"]
+  },
+  {
+    "text": "Dinge, die overrated sind? Du!",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Du begrüßt deinen Mann auch nach zehn Jahren mit ‚Hallo‘, weil ihr vor neun Jahren einmal Streit hattet.",
+    "categories": ["beziehung", "frech"]
+  },
+  {
+    "text": "Selbst die AfD hat mehr Werte als du.",
+    "categories": ["charakter", "sarkastisch"]
+  },
+  {
+    "text": "Dein Gesicht ist so entstellt, dass du dich in CapCut richtig austoben kannst.",
+    "categories": ["aussehen", "frech"]
+  },
+  {
+    "text": "Dich kindisch zu nennen würde nur Kinder beleidigen.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Bei dir war der Eintritt auch schon mal billiger.",
+    "categories": ["sexuell", "frech"]
+  },
+  {
+    "text": "Du bist nüchtern gesehen ganz schön scheiße.",
+    "categories": ["sarkastisch", "frech"]
+  },
+  {
+    "text": "Bei dir sind die ersten drei Minuten beim Sex schon spielentscheidend.",
+    "categories": ["sexuell", "frech"]
+  }
 ];
