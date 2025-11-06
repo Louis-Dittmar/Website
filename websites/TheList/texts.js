@@ -472,5 +472,221 @@ const texts = [
   {
     "text": "Hör auf zu überlegen, ob du gut genug bist. Du bist es nicht.",
     "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Du bist echt schwer zu unterschätzen.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Wenn ich dir jetzt recht gebe, haben wir uns beide geirrt.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Für deine Kompetenz bist du aber wirklich sehr selbstbewusst.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Wenn du mit anfasst, ist es, als ob zehn loslassen.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Wow, du hast das perfekte Gesicht fürs Radio.",
+    "categories": ["aussehen", "frech"]
+  },
+  {
+    "text": "Dein gesicht Passt perfekt für's Mikrofon",
+    "categories": ["aussehen", "frech"]
+  },
+  {
+    "text": "Wissen Sie, ich duze grundsätzlich alle Menschen, die ich sympathisch finde.",
+    "categories": ["charakter", "ironisch"]
+  },
+  {
+    "text": "Du warst immer ein Jäger der Weisheit, doch sie war dir immer einen Schritt voraus.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Ich verstehe, was die anderen sagen – ich find dich auch scheiße.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Die größte Freude, wenn wir uns sehen, ist die, auf Wiedersehen zu sagen.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Du bist wie eine alte Glühbirne – du ziehst ohne Ende, gibst aber nichts.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Gibt’s gegen dich nicht auch irgendwas von Ratiopharm?",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Du hast den Mut, dich in Themen einzubringen, bei denen andere sich vorher erst informieren würden.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Du bist wie das beste Pferd im Stall – du machst Mist ohne Ende.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Du bist mein größtes Vorbild – so weit fallen möchte ich nie.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Wärst du nicht zu hässlich für die Babyklappe gewesen, hätte man dich da abgegeben. Es ist nicht so, als wurde es nicht versucht.",
+    "categories": ["aussehen", "böse"]
+  },
+  {
+    "text": "Nicht mal die Babyklappe wollte dich, das sagt schon alles.",
+    "categories": ["aussehen", "böse"]
+  },
+  {
+    "text": "Für Abtreibung ist es nie zu spät, man kann dich sicher auch noch im 210. Monat abtreiben!",
+    "categories": ["aussehen", "böse"]
+  },
+  {
+    "text": "Du bist genauso dumm, wie du aussiehst. Mich wundert, dass du weißt, wie man läuft.",
+    "categories": ["intelligenz", "böse"]
+  },
+  {
+    "text": "Die Lücke, die du hinterlässt, ersetzt dich voll und ganz.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Wenn du dir die Finger in die Ohren steckst, ist das Hohlraumversiegelung.",
+    "categories": ["intelligenz", "frech"]
+  },
+  {
+    "text": "Du bist zwar nicht der Dümmste auf der Welt, aber du musst echt aufpassen, dass der andere nicht stirbt.",
+    "categories": ["intelligenz", "frech"]
+  },
+  {
+    "text": "Deine letzten beiden Gehirnzellen kämpfen um Platz drei.",
+    "categories": ["intelligenz", "frech"]
+  },
+  {
+    "text": "Mit dem, was du nicht weißt, können noch sechs andere durchfallen.",
+    "categories": ["intelligenz", "frech"]
+  },
+  {
+  "text": "Du lernst nach dem Motto: erst Panik, dann Pause.",
+  "categories": ["schule", "witzig"]
+  },
+  {
+  "text": "Du bist der Grund, warum Lehrer heimlich trinken.",
+  "categories": ["schule", "frech"]
+  },
+  {
+  "text": "Deine Noten sind wie du – konstant im Keller.",
+  "categories": ["schule", "bissig"]
+  },
+  {
+  "text": "Du bist die Person, wegen der Lehrer sagen: 'Ich hab alles gesehen.'",
+  "categories": ["schule", "sarkastisch"]
+  },
+  {
+  "text": "Du bist der lebende Beweis, dass man mit Glück auch durchfallen kann.",
+  "categories": ["schule", "frech"]
+  },
+  {
+  "text": "Wenn Verlieren ein Talent wäre, hättest du endlich eins.",
+  "categories": ["schule", "frech"]
+  },
+  {
+  "text": "Dein Name steht im Duden unter Toxisch.",
+  "categories": ["schule", "frech"]
+  },
+  {
+  "text": "Dein Name steht im Duden unter Toxisch.",
+  "categories": ["schule", "frech"]
+  },
+  {
+  "text": "Du und Abitur? Du hast schon bei der Anmeldung überfordert gewirkt.",
+  "categories": ["schule", "bissig"]
+  },
+  {
+  "text": "Diese Liste ist nur für Leute die Lesen können, du bist hier Falsch.",
+  "categories": ["schule", "bissig"]
+  },
+  {
+  "text": "Wenn dein Abi eine Note hätte, wäre sie Mitleid.",
+  "categories": ["schule", "bissig"]
+  },
+  {
+  "text": "Dein Abi-Motto sollte 'Versuch war’s wert' heißen.",
+  "categories": ["schule", "witzig"]
+  },
+  {
+  "text": "Deine Hilfsbereitschaft ist so inexistent, sie taucht nicht mal in der Theorie auf.",
+  "categories": ["charakter", "frech"]
+  },
+  {
+  "text": "Deine Empathie ist so selten, sie müsste vom Aussterben bedroht sein.",
+  "categories": ["charakter", "bissig"]
+  },
+  {
+  "text": "Deine Intelligenz ist so gut versteckt, sie gilt offiziell als verschollen.",
+  "categories": ["intelligenz", "sarkastisch"]
+  },
+  {
+  "text": "Deine Loyalität wurde getestet – Ergebnis: nicht nachweisbar.",
+  "categories": ["charakter", "bissig"]
+  },
+  {
+  "text": "Deine Hilfsbereitschaft ist wie dunkle Materie – man glaubt, sie existiert, hat sie aber nie gesehen.",
+  "categories": ["charakter", "witzig"]
+  },
+  {
+  "text": "Deine Aufmerksamkeitsspanne hat das Zeitlimit eines TikToks.",
+  "categories": ["charakter", "frech"]
+  },
+  {
+  "text": "Du bekommst Klausuren aus der ersten Klasse, weil dir die Lehrer nichts mehr zutrauen – und fällst trotzdem durch.",
+  "categories": ["charakter", "frech"]
+  },
+  {
+  "text": "Deine Eltern werden bezahlt, sonst wären sie schon längst verschwunden.",
+  "categories": ["familie", "bissig"]
+  },
+  {
+  "text": "Deine Eltern bekommen eine Entschädigung – niemand würde sonst so viel müssen.",
+  "categories": ["familie", "bissig"]
+  },
+  {
+  "text": "Deine Eltern halten dich nur aus, weil’s im Vertrag steht.",
+  "categories": ["familie", "sarkastisch"]
+  },
+  {
+  "text": "Deine Eltern haben dich bestimmt nicht geplant – höchstens bereut.",
+  "categories": ["familie", "bissig"]
+  },
+  {
+  "text": "Deine Eltern bekommen monatlich Schmerzensgeld.",
+  "categories": ["familie", "bissig"]
+  },
+  {
+  "text": "Dein Bruder ist der Beweis, dass die Gene deiner Familie nicht immer versagen.",
+  "categories": ["familie", "bissig"]
+  },
+  {
+  "text": "Dein Bruder ist wahrscheinlich der Grund, warum deine Eltern nicht komplett bereuen, Kinder zu haben.",
+  "categories": ["familie", "frech"]
+  },
+  {
+  "text": "Dein Bruder ist das Original, du die missglückte Kopie.",
+  "categories": ["familie", "frech"]
+  },
+  {
+  "text": "Dein Bruder war der Wunsch, du der überraschende Unfall.",
+  "categories": ["familie", "bissig"]
+  },
+  {
+  "text": "Dein Bruder ist der Grund, warum deine Eltern Hoffnung hatten – und dann bist du Gekommen",
+  "categories": ["familie", "frech"]
+  },
+  {
+  "text": "Wenn dein Bruder da ist, merkt man erst, wie überflüssig du bist.",
+  "categories": ["familie", "frech"]
   }
 ];
