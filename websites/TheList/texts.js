@@ -444,5 +444,33 @@ const texts = [
   {
     "text": "Du bist wie ein NFT – einzigartig, aber trotzdem will dich keiner.",
     "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Respekt ist eine großartige Eigenschaft. Du solltest in Erwägung ziehen, dir etwas davon anzueignen.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Der häufigste Grund, warum du im Leben scheiterst: Du bist einfach nicht gut genug.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Vergleiche dich nicht mit anderen. Du bist nicht mal annähernd so gut wie sie.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Die meisten Kalorien verbrennst du mit Augenrollen.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Eines Tages wird alles besser werden. Und dann bist du gekommen. Es hört nie auf.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Manche Menschen erhellen einen Raum, wenn sie ihn betreten. Du hingegen, wenn du ihn verlässt.",
+    "categories": ["charakter", "frech"]
+  },
+  {
+    "text": "Hör auf zu überlegen, ob du gut genug bist. Du bist es nicht.",
+    "categories": ["charakter", "frech"]
   }
 ];
