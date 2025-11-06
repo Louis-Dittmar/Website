@@ -282,11 +282,7 @@ const texts = [
     "categories": ["sarkastisch", "bitter"]
   },
   {
-    "text": "Dein Safewort wäre 'Kannst du das bitte machen",
-    "categories": ["sarkastisch", "bitter"]
-  },
-  {
-    "text": "Dein Safewort wäre 'Kannst du das bitte machen",
+    "text": "Dein Safewort wäre 'Kannst du das bitte machen'",
     "categories": ["sarkastisch", "bitter"]
   },
   {
