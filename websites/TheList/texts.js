@@ -440,5 +440,9 @@ const texts = [
   {
     "text": "Bei dir sind die ersten drei Minuten beim Sex schon spielentscheidend.",
     "categories": ["sexuell", "frech"]
+  },
+  {
+    "text": "Du bist wie ein NFT – einzigartig, aber trotzdem will dich keiner.",
+    "categories": ["charakter", "frech"]
   }
 ];
