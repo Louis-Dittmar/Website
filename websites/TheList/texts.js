@@ -597,7 +597,7 @@ const texts = [
     categories: ["schule", "frech"]
   },
   {
-    text: "Du und Abitur? Du hast schon bei der Anmeldung überfordert gewirkt.",
+    text: "Du und Abitur? Du warst schon bei der anmeldung Überfordert",
     categories: ["schule", "bissig"]
   },
   {
