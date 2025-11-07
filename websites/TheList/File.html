@@ -107,6 +107,12 @@
       color: #fff;
       transform: scale(1);
     }
+
+    .counter {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #888;
+    }
   </style>
 </head>
 <body>
@@ -115,17 +121,48 @@
     Drücke den Knopf für einen zufälligen Text
   </div>
   <button id="tryAgainBtn" onclick="generateRandomText()">Try Again</button>
+  <div class="counter" id="counter"></div>
 </div>
 
 <script src="texts.js"></script>
 <script>
   let isGenerating = false;
+  let remainingTexts = [];
+  let displayedCount = 0;
+
+  // Initialisiere die Liste beim ersten Laden
+  function initializeTexts() {
+    remainingTexts = [...texts];
+    shuffleArray(remainingTexts);
+    updateCounter();
+  }
+
+  // Fisher-Yates Shuffle Algorithmus
+  function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  }
+
+  function updateCounter() {
+    const counter = document.getElementById('counter');
+    if (texts.length > 0) {
+      counter.textContent = `${displayedCount} von ${texts.length} angezeigt`;
+    }
+  }
 
   function generateRandomText() {
     if (isGenerating) return;
     if (!texts || texts.length === 0) {
       alert('Keine Texte gefunden. Bitte texts.js Datei überprüfen.');
       return;
+    }
+
+    // Wenn alle Texte angezeigt wurden, neu initialisieren
+    if (remainingTexts.length === 0) {
+      initializeTexts();
+      displayedCount = 0;
     }
 
     isGenerating = true;
@@ -139,6 +176,7 @@
     const maxIterations = 15;
 
     const interval = setInterval(() => {
+      // Zeige zufällige Texte während der Animation
       const randomIndex = Math.floor(Math.random() * texts.length);
       display.textContent = texts[randomIndex].text;
       display.classList.add('animate');
@@ -151,12 +189,22 @@
 
       if (counter >= maxIterations) {
         clearInterval(interval);
+
+        // Wähle den nächsten Text aus der Liste ohne Wiederholung
+        const selectedText = remainingTexts.pop();
+        display.textContent = selectedText.text;
+        displayedCount++;
+        updateCounter();
+
         display.classList.remove('generating');
         isGenerating = false;
         button.disabled = false;
       }
     }, 100);
   }
+
+  // Initialisiere beim Laden
+  initializeTexts();
 </script>
 </body>
 </html>

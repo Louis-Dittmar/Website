@@ -437,7 +437,7 @@ const texts = [
     categories: ["sexuell", "frech"]
   },
   {
-    text: "Du bist wie ein NFT – einzigartig, aber trotzdem will dich keiner.",
+    text: "Du bist wie ein NFT – einzigartig, aber trotzdem nutzlos.",
     categories: ["charakter", "frech"]
   },
   {
@@ -457,11 +457,11 @@ const texts = [
     categories: ["charakter", "frech"]
   },
   {
-    text: "Eines Tages wird alles besser werden. Und dann bist du gekommen. Es hört nie auf.",
+    text: "ich dachte eines Tages würde alles besser werden. Und dann bist du gekommen. Es hört nie auf.",
     categories: ["charakter", "frech"]
   },
   {
-    text: "Manche Menschen erhellen einen Raum, wenn sie ihn betreten. Du hingegen, wenn du ihn verlässt.",
+    text: "Manche Menschen erhellen einen Raum, wenn sie ihn betreten. Du hingegen, wenn nur du ihn verlässt.",
     categories: ["charakter", "frech"]
   },
   {
@@ -593,10 +593,6 @@ const texts = [
     categories: ["schule", "frech"]
   },
   {
-    text: "Dein Name steht im Duden unter Toxisch.",
-    categories: ["schule", "frech"]
-  },
-  {
     text: "Du und Abitur? Du warst schon bei der anmeldung Überfordert",
     categories: ["schule", "bissig"]
   },
@@ -682,6 +678,10 @@ const texts = [
   },
   {
     text: "Wenn dein Bruder da ist, merkt man erst, wie überflüssig du bist.",
+    categories: ["familie", "frech"]
+  },
+  {
+    text: "Das Einzige, worauf deine Eltern bei dir stolz sind, ist, dass es unmöglich ist, noch schlechter zu werden.",
     categories: ["familie", "frech"]
   }
 ];
