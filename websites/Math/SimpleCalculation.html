@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Collatz Universum Simulation</title>
+  <meta content="Interaktive Visualisierung der Collatz-Vermutung" name="description">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script defer src="Math_Script.js"></script>
+  <link href="Math_Style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<canvas id="mainCanvas"></canvas>
+
+<div id="ui-layer">
+  <!-- Controls Top Left -->
+  <div class="absolute top-0 left-0 hud-panel w-80">
+    <h1 class="text-xl font-bold mb-4 text-blue-400">Collatz Universum</h1>
+
+    <div class="control-group">
+      <label>Modus</label>
+      <div class="mode-toggle">
+        <button class="active" id="modeAuto">Auto (Zählen)</button>
+        <button id="modeManual">Manuell</button>
+      </div>
+
+      <div class="hidden mt-2" id="manualControls">
+        <label>Zahl eingeben:</label>
+        <div class="flex gap-2">
+          <input id="manualInput" placeholder="z.B. 27" type="number">
+          <button id="manualSpawnBtn">Start</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Regel: n_neu = a*n + b</label>
+      <div class="input-row">
+        <span class="text-gray-400">a:</span>
+        <input id="ruleA" step="1" style="width: 50px;" type="number" value="3">
+        <span class="text-gray-400">b:</span>
+        <input id="ruleB" step="1" style="width: 50px;" type="number" value="1">
+        <button class="ml-auto text-xs py-1" id="applyRuleBtn">Set</button>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Physik & Darstellung</label>
+
+      <div class="mb-2">
+        <label class="text-xs text-gray-500">Anziehungskraft</label>
+        <input id="springForceSlider" max="0.1" min="0.005" step="0.001" type="range" value="0.03">
+      </div>
+
+      <div class="mb-2">
+        <label class="text-xs text-gray-500">Linienstärke</label>
+        <input id="lineWidthSlider" max="8.0" min="0.5" step="0.5" type="range" value="2.0">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label>Simulation</label>
+      <div class="mb-2">
+        <label class="text-xs text-gray-500">Geschwindigkeit</label>
+        <input id="speedSlider" max="3.0" min="0" step="0.1" type="range" value="1.0">
+      </div>
+      <div>
+        <label class="text-xs text-gray-500">Spawn-Rate</label>
+        <input id="spawnRateSlider" max="120" min="5" step="5" type="range" value="40">
+      </div>
+    </div>
+
+    <div class="control-group flex gap-2">
+      <button class="flex-1" id="toggleAudio">Sound: AUS</button>
+      <button class="flex-1" id="resetBtn">Reset</button>
+    </div>
+
+    <div class="text-xs text-gray-400 leading-relaxed">
+      <p>• <strong>Hover:</strong> Info bleibt 3 Sek.</p>
+      <p>• <strong>Mausrad:</strong> Zoom</p>
+      <p>• <strong>Rechtsklick:</strong> Verschieben</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
