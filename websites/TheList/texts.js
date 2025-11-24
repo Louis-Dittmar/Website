@@ -683,5 +683,21 @@ const texts = [
   {
     text: "Das Einzige, worauf deine Eltern bei dir stolz sind, ist, dass es unmöglich ist, noch schlechter zu werden.",
     categories: ["familie", "frech"]
+  },
+  {
+    text: "Nicht mal ein Zuhälter würde dich wollen, weil er mit dir kein Geld machen würde.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Du bist so überflüssig wie ein Sandkasten in der Sahara.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Selbst dein imaginärer Freund spielt lieber mit anderen Kindern.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Dich hat man auch nur großgezogen, weil man das Kindergeld brauchte.",
+    categories: ["charakter", "frech"]
   }
 ];
