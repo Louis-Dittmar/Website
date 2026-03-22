@@ -697,7 +697,31 @@ const texts = [
     categories: ["charakter", "frech"]
   },
   {
-    text: "Dich hat man auch nur großgezogen, weil man das Kindergeld brauchte.",
+    text: "Du gaslightest so hart, du könntest ganz Europa mit Gas versorgen.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Bei dir ist Gaslighting kein Red Flag, das ist ne ganze Raffinerie.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Statistsich gesehen ist es Wahrscheinlicher das du lügst, als das du die Warhheit sagst.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Du gaslightest so hart, du hättest das gesamte Drittes Reich versorgen können.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Du gaslightest so hart, du hättest das gesamte Drittes Reich versorgen können.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: " Wie sparst du Geld bei ihren Stromrechnungen? Du wenden Gaslighting an.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: " Wie sparst du Geld bei deiner Stromrechnungen? Du wenden Gaslighting an.",
     categories: ["charakter", "frech"]
   }
 ];
