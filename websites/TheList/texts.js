@@ -731,5 +731,37 @@ const texts = [
   {
     text: "Wie viele von euch braucht man, um eine Glühbirne zu wechseln? Keine. Ihr benutzt einfach Gaslighting.",
     categories: ["charakter", "frech"]
+  },
+  {
+    text: "Warum hat der Narzisst die Straße überquert? Er dachte, es wäre eine Grenze.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Wärst du eine Eule würdest du sagen: Ich. Ich. ich.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Was hast du mit einer Billigen Geschenkkarte gemeinsam? Du bist innen Leer.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Deine Lieblingskamera ist die Selfie-Kamera",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Du bist der lebende Beweis, das man zu viel Selbstliebe haben kann.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Dein großer Fan bist du Selbst.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Normale frauen können eine Orgasmus Fläschen. Aber du eine Ganze Beziehung.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Normale frauen können eine Orgasmus Fläschen. Aber du eine Ganze Beziehung.",
+    categories: ["charakter", "frech"]
   }
 ];
