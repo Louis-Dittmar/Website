@@ -713,15 +713,23 @@ const texts = [
     categories: ["charakter", "frech"]
   },
   {
-    text: "Du gaslightest so hart, du hättest das gesamte Drittes Reich versorgen können.",
-    categories: ["charakter", "frech"]
-  },
-  {
     text: " Wie sparst du Geld bei ihren Stromrechnungen? Du wenden Gaslighting an.",
     categories: ["charakter", "frech"]
   },
   {
     text: " Wie sparst du Geld bei deiner Stromrechnungen? Du wenden Gaslighting an.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Dein Problem ist, dass du nicht weißt, dass du das Problem bist.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Manche Menschen erhellen einen Raum, wenn sie ihn betreten. Du hingegen, wenn du ihn verlässt.",
+    categories: ["charakter", "frech"]
+  },
+  {
+    text: "Wie viele von euch braucht man, um eine Glühbirne zu wechseln? Keine. Ihr benutzt einfach Gaslighting.",
     categories: ["charakter", "frech"]
   }
 ];
